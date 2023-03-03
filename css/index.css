@@ -1,0 +1,88 @@
+
+body {
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../img/bg-login.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo-login {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  height: 80px;
+  width: 80px;
+}
+
+h2 {
+  text-align: center;
+  color: #FC671A;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-inline: 25px;
+  padding-bottom: 20px;
+  min-height: 65vh;
+  min-width: 55vh;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid rgba(189, 189, 189, 0.5);
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid rgba(189, 189, 189, 0.5);
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.input-submit {
+  padding: 10px;
+  background-color: #FC671A;
+  color: #ffffff;
+  border: none;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.input-submit:hover {
+  background-color: #FA5501;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+
