@@ -19,6 +19,7 @@ body {
 h2 {
     font-weight: bold;
     font-size: 20px;
+    color: #FC671A;
 }
 
 .form-container {
@@ -39,7 +40,42 @@ form {
     display: flex;
     flex-direction: column;
     color:#333;
+    gap: 10px;
 
 
+
+}
+
+.input {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 1px solid rgba(189, 189, 189, 0.5);
+    
+}
+
+.submit-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.input-submit-registrar {
+    padding: 10px;
+    background-color: #04B0A8;
+    border-radius: 6px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.input-submit-limpiar {
+    padding: 10px;
+    background-color: #FC671A;
+    border-radius: 6px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    
 }
 
