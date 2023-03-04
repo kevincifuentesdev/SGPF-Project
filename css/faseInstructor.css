@@ -1,0 +1,33 @@
+:root {
+    --bgbotones: #FCG671A;
+    --bgmenu: #39A900;
+    --bgtablas: #FFFFFF;
+    --borderinputs: rgba(189, 189, 189, 0.5);
+    --botonregistrar: #04B0A8;
+    --hoverbotones: #FA5501;
+    --label: #333;
+    --titulos: 24PX bold ;
+    --label_menu:  14PX bold;
+    --texto_info:  12PX Regular;
+    --borderForm: 8px;
+    --borderTabla: 6px;
+    
+
+}
+body { 
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: left;
+    min-height: 100vh;
+    width: 100%;
+
+
+
+}
+
+h3 {
+    border-bottom: solid 2px #000;  
+}
