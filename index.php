@@ -18,7 +18,7 @@
     <body>
         <img
             class="logo-login"
-            src="./img/logo-de-Sena-sin-fondo-Blanco.png"
+            src="./img/icons/logo-de-Sena-sin-fondo-Blanco.png"
             alt="Sena"
         />
         <section class="login-container">
