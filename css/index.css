@@ -85,4 +85,25 @@ label {
   color: #333;
 }
 
+@media (max-width: 768px) {
+  .logo-login {
+    position: relative;
+    top: 3%;
+    right: 3%;
+    width: 80px;
+    width: 80px;
+}
+
+  h2 {
+    font-size: 20px;
+    color: #FC671A;
+    text-align: center;
+  }
+
+  .login-container {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
 
