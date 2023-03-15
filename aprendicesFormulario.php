@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../../normalize.css">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;800&display=swap" rel="stylesheet">
-  <title>Ficha proyecto</title>
+  <title>Formulario Aprendices</title>
 </head>
 <body>
   <header>

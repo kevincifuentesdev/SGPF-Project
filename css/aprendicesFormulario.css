@@ -26,12 +26,6 @@ header {
   background-color: var(--blanco);
 }
 
-span {
-  color: var(--gris-texto);
-  font-size: 14px;
-  font-weight: bold;
-}
-
 body > header > div.logo-titulo > hr {
   height: 50px;
   border: 1px solid #898686;
@@ -41,6 +35,7 @@ body > header > div.logo-titulo > hr {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 body > header > div.logo-titulo > h2 {
@@ -198,6 +193,8 @@ textarea {
 
 }
 
+/* Responsive Table */
+
 @media (max-width: 768px) {
 
   .form-container {
@@ -234,8 +231,18 @@ textarea {
   }
 }
 
+/* Responsive Celular */
+
 @media (max-width: 425px) {
   .form-container {
     min-width: 90%
+  }
+
+  .input-submit-limpiar {
+    width: 40%;
+  }
+
+  .input-submit-registrar {
+    width: 40%;
   }
 }
