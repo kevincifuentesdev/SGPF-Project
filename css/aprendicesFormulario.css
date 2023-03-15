@@ -35,7 +35,6 @@ body > header > div.logo-titulo > hr {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
 }
 
 body > header > div.logo-titulo > h2 {
@@ -49,6 +48,8 @@ body > header > div.logo-titulo > h2 {
 .title-form {
   color: var(--naranja);
   font-weight: bold;
+  margin-bottom: 10px;
+
 }
 
 .iconoHamburguesa{
@@ -76,38 +77,17 @@ body > nav > ul > li > a {
   font-weight: 500;
 }
 
-input[type="search"] {
-  border: 1px solid rgba(189, 189, 189, 0.5);
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 14px;
-}
 
-button[type="submit"] {
-  border: none;
-  padding: 6px 10px;
-  background-color: var(--naranja);
-  color: #fff;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: var(--naranja-hover);
+body > main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 4%;
 }
 
 label {
   font-weight: 600;
   color: #333;
-}
-
-
-body > main {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-block: 4%;
 }
 
 .form-container {
@@ -145,12 +125,12 @@ select {
   margin-bottom: 5px;
 }
 
-textarea {
+/* textarea {
   padding: 10px;
   border: 1px solid rgba(189, 189, 189, 0.5);
   border-radius: 6px;
   font-size: 14px;
-}
+} */
 
 .input-submit-registrar {
   padding: 10px;

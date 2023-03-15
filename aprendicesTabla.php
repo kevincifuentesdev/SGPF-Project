@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Hojas de estilo -->
-  <link rel="stylesheet" href="./css/instructor.css">
+  <link rel="stylesheet" href="./css/aprendicesTabla.css">
   <link rel="stylesheet" href="./css/normalize.css">
 
   <!-- Fonts -->
@@ -43,11 +43,13 @@
         <input type="search" id="buscar" name="buscar" placeholder="Buscar por nombre o ficha">
         <button type="submit">Buscar</button>
       </form>
+      <a href="./instructor.php"><h2>Nuevo Aprendiz</h2></a>
       <table cellspacing="0">
         <thead>
           <tr>
             <th>Ficha</th>
             <th>Tipo de documento</th>
+            <th>Número de documento</th>
             <th>Nombre</th>
             <th>Apellidos</th>
             <th>Estado</th>
@@ -58,6 +60,7 @@
             <tr>
               <td>2559216</td>
               <td>c.c</td>
+              <td>103582723</td>
               <td>Grimaldo Antonio</td>
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
@@ -70,6 +73,7 @@
             <tr>
               <td>2559216</td>
               <td>c.c</td>
+              <td>103582723</td>
               <td>Grimaldo Antonio</td>
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
@@ -82,6 +86,7 @@
             <tr>
               <td>2559216</td>
               <td>c.c</td>
+              <td>103582723</td>
               <td>Grimaldo Antonio</td>
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
@@ -94,6 +99,7 @@
             <tr>
               <td>2559216</td>
               <td>c.c</td>
+              <td>103582723</td>
               <td>Grimaldo Antonio</td>
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
@@ -106,18 +112,7 @@
             <tr>
               <td>2559216</td>
               <td>c.c</td>
-              <td>Grimaldo Antonio</td>
-              <td>Del perpetuo socorro</td>
-              <td>Formación</td>
-              <td>
-                <span>editar</span>
-                <span>ver detalle</span>
-                <span>borrar</span>
-              </td>
-            </tr>
-            <tr>
-              <td>2559216</td>
-              <td>c.c</td>
+              <td>103582723</td>
               <td>Grimaldo Antonio</td>
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
