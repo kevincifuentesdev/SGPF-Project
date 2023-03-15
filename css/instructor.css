@@ -15,16 +15,16 @@
     --azul-btn-hover: #038982;
 }
 
-/* body {
+.section2 {
   display: flex;
   font-family: 'Montserrat', sans-serif;
   gap: 0 10px;
   align-items: center;
   justify-content: center;
-  width: 100%;
   flex-wrap: wrap;
   margin: auto;
-} */
+  width: 25%;
+}
 
 header {
     display: flex;
@@ -137,10 +137,6 @@ form {
     
 }
 
-.section2{
-    width: 25%;
-}
-
 /*Query Header*/
 @media (max-width: 767px) {
 
@@ -186,9 +182,9 @@ form {
     flex-direction:column;
   }
 
-  .section2{
-    width: 65vh;
-}
+  .section2 {
+    width: 75vh;
+  }
 
   h2 {
     font-size: 20px;
