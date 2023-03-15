@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --verde: #39A900;
+    --naranja: #FC671A;
+    --naranja-hover: #FA5501;
+    --blanco: #FFFFFF;
+    --gris-texto: #333;
+    --azul-btn: #04B0A8;
+    --azul-btn-hover: #038982;
+}
+
+/* body {
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  gap: 0 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: auto;
+} */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+    background-color: var(--blanco);
+}
+  
+body > header > div.logo-titulo > hr {
+    height: 50px;
+    border: 1px solid #898686;
+}
+  
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iconoHamburguesa{
+    display: none;
+}
+
+body > header > div.logo-titulo > h2 {
+    text-align: center;
+    color: var(--verde);
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde);
+    padding: 10px;
+}
+  
+body > nav > ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+  
+body > nav > ul > li > a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #FC671A;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+    gap: 20px;
+    min-height: 60vh;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 4px 4px 15px;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color:#333;
+    gap: 10px;
+}
+
+.input {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 1px solid rgba(189, 189, 189, 0.5);
+    
+}
+
+.submit-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.input-submit-registrar {
+    padding: 10px;
+    background-color: #04B0A8;
+    border-radius: 6px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.input-submit-limpiar {
+    padding: 10px;
+    background-color: #FC671A;
+    border-radius: 6px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    
+}
+
+.section2{
+    width: 25%;
+}
+
+/*Query Header*/
+@media (max-width: 767px) {
+
+  header{
+    justify-content: space-between;
+  }
+
+  header > div.logo-titulo > h2{
+    display: none;
+  }
+  .iconoHamburguesa{
+    display: block;
+    
+  }
+
+  nav {
+    padding: 0px;
+    width:50%;
+    max-height:0px;
+    overflow:hidden;
+    transition: 1s all; 
+       
+  }
+  .mostrar {
+        max-height:600px;
+        padding: 20px;
+  }
+ 
+  nav ul{
+    flex-direction: column;
+  }
+}
+
+/*Query Formulario */
+@media (max-width:1280px) {
+  .form-container { 
+    display: flex;
+    place-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction:column;
+  }
+
+  .section2{
+    width: 65vh;
+}
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+}
