@@ -101,6 +101,8 @@
                         placeholder="Ingrese el objetivo general del proyecto"
                     ></textarea>
 
+                    <a href="./objetivosFormulario.php"><h4>Crear Objetivos</h4></a>
+
                     <label for="funcion">Funcion:</label>
                     <textarea
                         name="funcion"

@@ -172,6 +172,10 @@
     gap: 10px;
   
   }
+
+  body > main > div > form > a {
+    color: var(--verde);
+  }
   
   /* Responsive Table */
   
