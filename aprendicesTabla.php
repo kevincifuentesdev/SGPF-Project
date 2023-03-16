@@ -65,7 +65,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <button class="btn-editar">Editar</button>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
@@ -78,7 +78,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <button class="btn-editar">Editar</button>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
@@ -91,7 +91,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <button class="btn-editar">Editar</button>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
@@ -104,7 +104,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <button class="btn-editar">Editar</button>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
@@ -117,7 +117,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <button class="btn-editar">Editar</button>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
@@ -130,7 +130,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <button class="btn-editar">Editar</button>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
@@ -143,46 +143,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <button class="btn-editar">Editar</button>
-                <button class="btn-detalle">Ver detalle</button>
-                <button class="btn-borrar">Borrar</button>
-              </td>
-            </tr>
-            <tr>
-              <td>2559216</td>
-              <td>c.c</td>
-              <td>103582723</td>
-              <td>Grimaldo Antonio</td>
-              <td>Del perpetuo socorro</td>
-              <td>Formación</td>
-              <td class="container-action-btns">
-                <button class="btn-editar">Editar</button>
-                <button class="btn-detalle">Ver detalle</button>
-                <button class="btn-borrar">Borrar</button>
-              </td>
-            </tr>
-            <tr>
-              <td>2559216</td>
-              <td>c.c</td>
-              <td>103582723</td>
-              <td>Grimaldo Antonio</td>
-              <td>Del perpetuo socorro</td>
-              <td>Formación</td>
-              <td class="container-action-btns">
-                <button class="btn-editar">Editar</button>
-                <button class="btn-detalle">Ver detalle</button>
-                <button class="btn-borrar">Borrar</button>
-              </td>
-            </tr>
-            <tr>
-              <td>2559216</td>
-              <td>c.c</td>
-              <td>103582723</td>
-              <td>Grimaldo Antonio</td>
-              <td>Del perpetuo socorro</td>
-              <td>Formación</td>
-              <td class="container-action-btns">
-                <button class="btn-editar">Editar</button>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>

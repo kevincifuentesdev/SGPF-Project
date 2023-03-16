@@ -66,7 +66,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <button class="btn-editar">Editar</button>
+                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
@@ -78,7 +78,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <button class="btn-editar">Editar</button>
+                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
@@ -90,7 +90,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <button class="btn-editar">Editar</button>
+                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
@@ -102,7 +102,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <button class="btn-editar">Editar</button>
+                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
@@ -114,7 +114,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <button class="btn-editar">Editar</button>
+                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
@@ -126,7 +126,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <button class="btn-editar">Editar</button>
+                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
@@ -138,19 +138,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <button class="btn-editar">Editar</button>
-                                <button class="btn-detalle">Ver detalle</button>
-                                <button class="btn-borrar">Borrar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>19230</td>
-                            <td>Sgpf</td>
-                            <td>Sena</td>
-                            <td>Programacion Software</td>
-                            <td>En proceso</td>
-                            <td class="container-action-btns">
-                                <button class="btn-editar">Editar</button>
+                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
