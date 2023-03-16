@@ -39,13 +39,14 @@
                 <h2 class="title-tabla">Datos proyecto</h2>
                 <form action="/buscar" method="GET">
                     <input
-                        type="search"
-                        id="buscar"
-                        name="buscar"
-                        placeholder="Buscar por nombre o ficha"
+                    type="search"
+                    id="buscar"
+                    name="buscar"
+                    placeholder="Buscar por nombre o ficha"
                     />
                     <button type="submit">Buscar</button>
                 </form>
+                <a href="./instructor.php"><h2>Nuevo Proyecto</h2></a>
                 <table cellspacing="0">
                     <thead>
                         <tr>
