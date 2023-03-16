@@ -46,7 +46,7 @@
                     />
                     <button type="submit">Buscar</button>
                 </form>
-                <a href="./instructor.php"><h2>Nuevo Proyecto</h2></a>
+                <a href="./fichaProyectoFormulario.php"><h2>Nuevo Proyecto</h2></a>
                 <table cellspacing="0">
                     <thead>
                         <tr>
@@ -65,10 +65,10 @@
                             <td>Sena</td>
                             <td>Programacion Software</td>
                             <td>En proceso</td>
-                            <td>
-                                <span>editar</span>
-                                <span>ver detalle</span>
-                                <span>borrar</span>
+                            <td class="container-action-btns">
+                                <button class="btn-editar">Editar</button>
+                                <button class="btn-detalle">Ver detalle</button>
+                                <button class="btn-borrar">Borrar</button>
                             </td>
                         </tr>
                         <tr>
@@ -77,10 +77,10 @@
                             <td>Sena</td>
                             <td>Programacion Software</td>
                             <td>En proceso</td>
-                            <td>
-                                <span>editar</span>
-                                <span>ver detalle</span>
-                                <span>borrar</span>
+                            <td class="container-action-btns">
+                                <button class="btn-editar">Editar</button>
+                                <button class="btn-detalle">Ver detalle</button>
+                                <button class="btn-borrar">Borrar</button>
                             </td>
                         </tr>
                         <tr>
@@ -89,10 +89,10 @@
                             <td>Sena</td>
                             <td>Programacion Software</td>
                             <td>En proceso</td>
-                            <td>
-                                <span>editar</span>
-                                <span>ver detalle</span>
-                                <span>borrar</span>
+                            <td class="container-action-btns">
+                                <button class="btn-editar">Editar</button>
+                                <button class="btn-detalle">Ver detalle</button>
+                                <button class="btn-borrar">Borrar</button>
                             </td>
                         </tr>
                         <tr>
@@ -101,10 +101,10 @@
                             <td>Sena</td>
                             <td>Programacion Software</td>
                             <td>En proceso</td>
-                            <td>
-                                <span>editar</span>
-                                <span>ver detalle</span>
-                                <span>borrar</span>
+                            <td class="container-action-btns">
+                                <button class="btn-editar">Editar</button>
+                                <button class="btn-detalle">Ver detalle</button>
+                                <button class="btn-borrar">Borrar</button>
                             </td>
                         </tr>
                         <tr>
@@ -113,10 +113,10 @@
                             <td>Sena</td>
                             <td>Programacion Software</td>
                             <td>En proceso</td>
-                            <td>
-                                <span>editar</span>
-                                <span>ver detalle</span>
-                                <span>borrar</span>
+                            <td class="container-action-btns">
+                                <button class="btn-editar">Editar</button>
+                                <button class="btn-detalle">Ver detalle</button>
+                                <button class="btn-borrar">Borrar</button>
                             </td>
                         </tr>
                         <tr>
@@ -125,10 +125,10 @@
                             <td>Sena</td>
                             <td>Programacion Software</td>
                             <td>En proceso</td>
-                            <td>
-                                <span>editar</span>
-                                <span>ver detalle</span>
-                                <span>borrar</span>
+                            <td class="container-action-btns">
+                                <button class="btn-editar">Editar</button>
+                                <button class="btn-detalle">Ver detalle</button>
+                                <button class="btn-borrar">Borrar</button>
                             </td>
                         </tr>
                         <tr>
@@ -137,10 +137,10 @@
                             <td>Sena</td>
                             <td>Programacion Software</td>
                             <td>En proceso</td>
-                            <td>
-                                <span>editar</span>
-                                <span>ver detalle</span>
-                                <span>borrar</span>
+                            <td class="container-action-btns">
+                                <button class="btn-editar">Editar</button>
+                                <button class="btn-detalle">Ver detalle</button>
+                                <button class="btn-borrar">Borrar</button>
                             </td>
                         </tr>
                         <tr>
@@ -149,46 +149,10 @@
                             <td>Sena</td>
                             <td>Programacion Software</td>
                             <td>En proceso</td>
-                            <td>
-                                <span>editar</span>
-                                <span>ver detalle</span>
-                                <span>borrar</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>19230</td>
-                            <td>Sgpf</td>
-                            <td>Sena</td>
-                            <td>Programacion Software</td>
-                            <td>En proceso</td>
-                            <td>
-                                <span>editar</span>
-                                <span>ver detalle</span>
-                                <span>borrar</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>19230</td>
-                            <td>Sgpf</td>
-                            <td>Sena</td>
-                            <td>Programacion Software</td>
-                            <td>En proceso</td>
-                            <td>
-                                <span>editar</span>
-                                <span>ver detalle</span>
-                                <span>borrar</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>19230</td>
-                            <td>Sgpf</td>
-                            <td>Sena</td>
-                            <td>Programacion Software</td>
-                            <td>En proceso</td>
-                            <td>
-                                <span>editar</span>
-                                <span>ver detalle</span>
-                                <span>borrar</span>
+                            <td class="container-action-btns">
+                                <button class="btn-editar">Editar</button>
+                                <button class="btn-detalle">Ver detalle</button>
+                                <button class="btn-borrar">Borrar</button>
                             </td>
                         </tr>
                     </tbody>

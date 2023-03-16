@@ -188,7 +188,7 @@ body > main {
 
 table {
   width: 90%;
-  display: contents;
+  display: table;
   background-color: var(--blanco);
   border-radius: 8px;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
@@ -202,22 +202,66 @@ thead {
 
 td {
   padding: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 th {
   padding: 10px;
 }
 
-span {
-  color: var(--gris-texto);
+.container-action-btns {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: max-content;
+}
+
+.btn-editar {
+  color: #ffffff;
+  background-color: #0D6EFD;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px;
   font-size: 14px;
-  font-weight: bold;
+  cursor: pointer;
+}
+.btn-editar:hover {
+  background-color: #0a4194;
+}
+.btn-borrar {
+  color: #ffffff;
+  background-color: #DC3545;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px;
+}
+.btn-borrar:hover {
+  background-color: #b12b39;
+}
+.btn-detalle {
+  color: #ffffff;
+  background-color: #198754;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px;
+}
+.btn-detalle:hover {
+  background-color: #125e3a;
+}
+
+tr:nth-child(2n) {
+  background-color: #dfdfdf;
 }
 
 
-
-/* Responsive Table */
+/* Responsive Tablet */
 
 @media (max-width: 768px) {
 

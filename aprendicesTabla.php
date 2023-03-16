@@ -43,7 +43,7 @@
         <input type="search" id="buscar" name="buscar" placeholder="Buscar por nombre o ficha">
         <button type="submit">Buscar</button>
       </form>
-      <a href="./instructor.php"><h2>Nuevo Aprendiz</h2></a>
+      <a href="./aprendicesFormulario.php"><h2>Nuevo Aprendiz</h2></a>
       <table cellspacing="0">
         <thead>
           <tr>
@@ -64,10 +64,10 @@
               <td>Grimaldo Antonio</td>
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
-              <td>
-                <span>editar</span>
-                <span>ver detalle</span>
-                <span>borrar</span>
+              <td class="container-action-btns">
+                <button class="btn-editar">Editar</button>
+                <button class="btn-detalle">Ver detalle</button>
+                <button class="btn-borrar">Borrar</button>
               </td>
             </tr>
             <tr>
@@ -77,10 +77,10 @@
               <td>Grimaldo Antonio</td>
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
-              <td>
-                <span>editar</span>
-                <span>ver detalle</span>
-                <span>borrar</span>
+              <td class="container-action-btns">
+                <button class="btn-editar">Editar</button>
+                <button class="btn-detalle">Ver detalle</button>
+                <button class="btn-borrar">Borrar</button>
               </td>
             </tr>
             <tr>
@@ -90,10 +90,10 @@
               <td>Grimaldo Antonio</td>
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
-              <td>
-                <span>editar</span>
-                <span>ver detalle</span>
-                <span>borrar</span>
+              <td class="container-action-btns">
+                <button class="btn-editar">Editar</button>
+                <button class="btn-detalle">Ver detalle</button>
+                <button class="btn-borrar">Borrar</button>
               </td>
             </tr>
             <tr>
@@ -103,10 +103,10 @@
               <td>Grimaldo Antonio</td>
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
-              <td>
-                <span>editar</span>
-                <span>ver detalle</span>
-                <span>borrar</span>
+              <td class="container-action-btns">
+                <button class="btn-editar">Editar</button>
+                <button class="btn-detalle">Ver detalle</button>
+                <button class="btn-borrar">Borrar</button>
               </td>
             </tr>
             <tr>
@@ -116,10 +116,75 @@
               <td>Grimaldo Antonio</td>
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
-              <td>
-                <span>editar</span>
-                <span>ver detalle</span>
-                <span>borrar</span>
+              <td class="container-action-btns">
+                <button class="btn-editar">Editar</button>
+                <button class="btn-detalle">Ver detalle</button>
+                <button class="btn-borrar">Borrar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2559216</td>
+              <td>c.c</td>
+              <td>103582723</td>
+              <td>Grimaldo Antonio</td>
+              <td>Del perpetuo socorro</td>
+              <td>Formación</td>
+              <td class="container-action-btns">
+                <button class="btn-editar">Editar</button>
+                <button class="btn-detalle">Ver detalle</button>
+                <button class="btn-borrar">Borrar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2559216</td>
+              <td>c.c</td>
+              <td>103582723</td>
+              <td>Grimaldo Antonio</td>
+              <td>Del perpetuo socorro</td>
+              <td>Formación</td>
+              <td class="container-action-btns">
+                <button class="btn-editar">Editar</button>
+                <button class="btn-detalle">Ver detalle</button>
+                <button class="btn-borrar">Borrar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2559216</td>
+              <td>c.c</td>
+              <td>103582723</td>
+              <td>Grimaldo Antonio</td>
+              <td>Del perpetuo socorro</td>
+              <td>Formación</td>
+              <td class="container-action-btns">
+                <button class="btn-editar">Editar</button>
+                <button class="btn-detalle">Ver detalle</button>
+                <button class="btn-borrar">Borrar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2559216</td>
+              <td>c.c</td>
+              <td>103582723</td>
+              <td>Grimaldo Antonio</td>
+              <td>Del perpetuo socorro</td>
+              <td>Formación</td>
+              <td class="container-action-btns">
+                <button class="btn-editar">Editar</button>
+                <button class="btn-detalle">Ver detalle</button>
+                <button class="btn-borrar">Borrar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2559216</td>
+              <td>c.c</td>
+              <td>103582723</td>
+              <td>Grimaldo Antonio</td>
+              <td>Del perpetuo socorro</td>
+              <td>Formación</td>
+              <td class="container-action-btns">
+                <button class="btn-editar">Editar</button>
+                <button class="btn-detalle">Ver detalle</button>
+                <button class="btn-borrar">Borrar</button>
               </td>
             </tr>
         </tbody>
