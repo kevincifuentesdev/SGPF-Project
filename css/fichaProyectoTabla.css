@@ -1,0 +1,288 @@
+:root{
+    --verde: #39A900;
+    --naranja: #FC671A;
+    --naranja-hover: #FA5501;
+    --blanco: #FFFFFF;
+    --gris-texto: #333;
+    --azul-btn: #04B0A8;
+    --azul-btn-hover: #038982;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      font-family: 'Montserrat', sans-serif!important;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 20px;
+    background-color: var(--blanco);
+  }
+  
+  body > header > div.logo-titulo > hr {
+    height: 50px;
+    border: 1px solid #898686;
+  }
+  
+  .logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  body > header > div.logo-titulo > h2 {
+    text-align: center;
+    color: var(--verde);
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  
+  .title-tabla {
+    text-align: center;
+    color: var(--gris-texto);
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .iconoHamburguesa{
+    display: none;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde);
+    padding: 5px;
+    padding-block: 10px;
+  }
+  
+  body > nav > ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  body > nav > ul > li > a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 500;
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  input[type="search"] {
+    border: 1px solid rgba(189, 189, 189, 0.5);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 70%;
+  }
+  
+  button[type="submit"] {
+    border: none;
+    padding: 6px 10px;
+    background-color: var(--naranja);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: var(--naranja-hover);
+  }
+  
+  label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .container-tabla > a {
+    text-decoration: underline;
+    color: #333;
+    text-align: center;
+  }
+  
+  body > main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 4%;
+  }
+  
+  .container-tabla {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    align-self: start;
+  }
+  
+  
+  .input {
+    padding: 10px;
+    border: 1px solid rgba(189, 189, 189, 0.5);
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .input-submit-registrar {
+    padding: 10px;
+    background-color: #04B0A8;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    width: 30%;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .input-submit-registrar:hover {
+    background-color: #038982;
+  }
+  
+  .input-submit-limpiar {
+    padding: 10px;
+    background-color:#FC671A;
+    width: 30%;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .input-submit-limpiar:hover {
+    background-color: var(--naranja-hover);
+    color: var(--blanco);
+  }
+  
+  .btns-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  table {
+    width: 90%;
+    display: contents;
+    background-color: var(--blanco);
+    border-radius: 8px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  thead {
+    color: var(--blanco);
+    background-color: var(--naranja);
+    padding: 10px;
+  }
+  
+  td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    padding: 10px;
+  }
+  
+  span {
+    color: var(--gris-texto);
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  
+  
+  /* Responsive Table */
+  
+  @media (max-width: 768px) {
+  
+    .container-tabla {
+      width: 90%;
+    }
+  
+    form {
+      flex-direction: column;
+    }
+  
+    table {
+      width: 90%;
+      display: block;
+      overflow-x: auto;
+    }
+  
+    input[type="search"] {
+      width: 35%;
+    }
+  
+    button[type="submit"] {
+      width: 35%;
+      background-color: var(--verde);
+    }
+  
+    header > div.logo-titulo > h2{
+      display: none;
+    }
+  
+    body > header > div.logo-titulo > hr {
+      display: none;
+    }
+  
+    .iconoHamburguesa{
+      display: block;
+    }
+  
+    .mostrar {
+      max-height:600px;
+      padding: 20px;
+    }
+  
+    nav {
+      padding: 0px;
+      width:100%;
+      max-height:0px;
+      overflow:hidden;
+      transition: 1s all; 
+    }
+  
+    nav ul{
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive Celular */
+  
+  @media (max-width: 425px) {
+    input[type="search"] {
+      width: 70%;
+    }
+  
+    button[type="submit"] {
+      width: 70%;
+    }
+  }
+  
