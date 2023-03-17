@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./css/fichaProyectoFormulario.css" />
+    <link rel="stylesheet" href="./css/proyecto.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>Formulario Ficha Proyecto</title>
+    <title>Editar Ficha Proyecto</title>
 </head>
 
 <body>
@@ -40,7 +40,7 @@
     </nav>
     <main>
         <div class="form-container">
-            <h2 class="title-form">Nuevo Proyecto</h2>
+            <h2 class="title-form">Editar Datos Proyecto</h2>
             <form action="" class="form-nuevo-proyecto">
                 <label for="nombre">Nombre:</label>
                 <input class="input" type="text" name="nombre" placeholder="Ingrese Nombre" id="" />
@@ -66,10 +66,6 @@
                 <textarea name="obj-general" id="obj-general" cols="20" rows="3"
                     placeholder="Ingrese el objetivo general del proyecto"></textarea>
 
-                <a href="./objetivoFormulario.php">
-                    <h4>Crear Objetivos</h4>
-                </a>
-
                 <label for="funcion">Funcion:</label>
                 <textarea name="funcion" id="funcion" cols="20" rows="3"
                     placeholder="Ingrese la función del proyecto"></textarea>
@@ -85,7 +81,7 @@
                 </select>
 
                 <div class="btns-container">
-                    <input class="input-submit-registrar" type="submit" value="Registrar" />
+                    <input class="input-submit-registrar" type="submit" value="Actualizar" />
                     <input class="input-submit-limpiar" type="submit" value="Limpiar" />
                 </div>
             </form>

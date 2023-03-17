@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="./css/aprendicesFormulario.css">
+    <link rel="stylesheet" href="./css/aprendices.css">
     <link rel="stylesheet" href="./css/normalize.css">
 
     <!-- Fonts -->
