@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>Editar Aprendices</title>
+    <title>Objetivo Formulario</title>
 </head>
 
 <body>
@@ -42,39 +42,16 @@
     </nav>
     <main>
         <div class="form-container">
-            <h2 class="title-form">Editar Datos Aprendiz</h2>
+            <h2 class="title-form">Nuevo Objetivo</h2>
             <form action="" class="form-nuevo-proyecto">
-                <label for="ficha">Ficha:</label>
-                <input class="input" type="text" name="ficha" placeholder="Ingrese ficha" id="">
+                <label for="objetivo">Objetivo Especifico:</label>
+                <input class="input" type="text" name="objetivo" placeholder="Ingrese ficha" id="">
 
-                <label for="documento">Tipo de documento:</label>
-                <select name="documento" id="documento">
-                    <option value="aprobado">C.C</option>
-                    <option value="reprobado">T.I</option>
-                    <option value="ajustar">PEP</option>
-                </select>
-
-                <label for="nroDocumento">Numero de documento:</label>
-                <input class="input" type="text" name="nroDocumento" placeholder="Ingrese su numero de documento" id="">
-
-                <label for="nombre">Nombre:</label>
-                <input class="input" type="text" name="nombre" placeholder="Ingrese nombre" id="">
-
-
-                <label for="apeliido">Apellido:</label>
-                <input class="input" type="text" name="apeliido" placeholder="Ingrese apeliido" id="">
-
-                <label for="estado">Estado:</label>
-                <select name="estado" id="estado">
-                    <option value="aprobado">Formación</option>
-                    <option value="reprobado">Condicional</option>
-                    <option value="ajustar">Cancelado</option>
-                    <option value="ajustar">Traslado</option>
-                    <option value="ajustar">Retirado</option>
-                </select>
+                <label for="proyecto">Proyecto:</label>
+                <input class="input" type="text" name="proyecto" placeholder="Ingrese su numero de documento" id="">
 
                 <div class="btns-container">
-                    <input class="input-submit-registrar" type="submit" value="Actualizar">
+                    <input class="input-submit-registrar" type="submit" value="Registrar">
                     <input class="input-submit-limpiar " type="submit" value="Limpiar">
                 </div>
             </form>
