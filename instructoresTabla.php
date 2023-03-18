@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/tablaInstructores.css">
+    <link rel="stylesheet" href="./css/instructoresTabla.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;800&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
         <form action="/buscar" method="GET">
         <input type="search" id="buscar" name="buscar" placeholder="Buscar por nombre o documento">
         <button type="submit">Buscar</button>
-        <a href="./instructor.php"><h2>Nuevo Instructor</h2></a>
+        <a href="./instructorAgregar.php"><h2>Nuevo Instructor</h2></a>
     </form>
     <table cellspacing="0">
         <thead>
@@ -59,7 +59,7 @@
                 <td>939393</td>
                 <td>Carlos Gomez</td>
                 <td>
-                <span><a href="./editarInstructor.html">editar</a></span>
+                <span><a href="./instructoresEditar.html">editar</a></span>
                 <span>ver detalle</span>
                 <span>borrar</span>
             </td>
@@ -68,7 +68,7 @@
                 <td>55436</td>
                 <td>Marta Gomez</td>
                 <td>
-                <span><a href="./editarInstructor.html">editar</a></span>
+                <span><a href="./instructoresEditar.html">editar</a></span>
                 <span>ver detalle</span>
                 <span>borrar</span>
             </td>

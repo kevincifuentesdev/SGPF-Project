@@ -37,7 +37,7 @@
   <section class="form-container section2">
     
     <form action="">
-        <span><h2>Editar Datos de Instructor</h2></span>
+        <span><h2>Editar Datos Instructor</h2></span>
     <label for="user"      >Cedula:</label>
     <input class="input" type="text" name="user" placeholder="Ingrese Cedula" id="">
     <label for="Name">Nombre:</label>

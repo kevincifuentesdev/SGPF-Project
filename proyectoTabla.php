@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="./css/tablaProyecto.css" />
+        <link rel="stylesheet" href="./css/proyectoTabla.css" />
         <link rel="stylesheet" href="./css/normalize.css" />
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +46,7 @@
                     />
                     <button type="submit">Buscar</button>
                 </form>
-                <a href="./fichaProyectoFormulario.php"><h2>Nuevo Proyecto</h2></a>
+                <a href="./proyectoAgregar.php"><h2>Nuevo Proyecto</h2></a>
                 <table cellspacing="0">
                     <thead>
                         <tr>
@@ -66,7 +66,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
+                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
@@ -78,7 +78,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
+                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
@@ -90,7 +90,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
+                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
@@ -102,7 +102,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
+                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
@@ -114,7 +114,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
+                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
@@ -126,7 +126,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
+                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>
@@ -138,7 +138,7 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <a href="./fichaProyectoEditar.php"><button class="btn-editar">Editar</button></a>
+                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
                                 <button class="btn-detalle">Ver detalle</button>
                                 <button class="btn-borrar">Borrar</button>
                             </td>

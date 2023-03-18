@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Hojas de estilo -->
-  <link rel="stylesheet" href="./css/tablaAprendices.css">
+  <link rel="stylesheet" href="./css/aprendicesTabla.css">
   <link rel="stylesheet" href="./css/normalize.css">
 
   <!-- Fonts -->
@@ -43,7 +43,7 @@
         <input type="search" id="buscar" name="buscar" placeholder="Buscar por nombre o ficha">
         <button type="submit">Buscar</button>
       </form>
-      <a href="./aprendicesFormulario.php"><h2>Nuevo Aprendiz</h2></a>
+      <a href="./aprendicesAgregar.php"><h2>Nuevo Aprendiz</h2></a>
       <table cellspacing="0">
         <thead>
           <tr>
@@ -65,7 +65,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <a href="./editarAprendices.php"><button class="btn-editar">Editar</button></a>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
@@ -78,7 +78,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <a href="./editarAprendices.php"><button class="btn-editar">Editar</button></a>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
@@ -91,7 +91,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <a href="./editarAprendices.php"><button class="btn-editar">Editar</button></a>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
@@ -104,7 +104,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <a href="./editarAprendices.php"><button class="btn-editar">Editar</button></a>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
@@ -117,7 +117,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <a href="./editarAprendices.php"><button class="btn-editar">Editar</button></a>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
@@ -130,7 +130,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <a href="./editarAprendices.php"><button class="btn-editar">Editar</button></a>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
@@ -143,7 +143,7 @@
               <td>Del perpetuo socorro</td>
               <td>Formación</td>
               <td class="container-action-btns">
-                <a href="./editarAprendices.php"><button class="btn-editar">Editar</button></a>
+                <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
                 <button class="btn-detalle">Ver detalle</button>
                 <button class="btn-borrar">Borrar</button>
               </td>
