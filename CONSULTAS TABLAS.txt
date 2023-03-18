@@ -1,0 +1,32 @@
+CONSULTAS TABLAS
+
+APRENDIZ 
+SELECT programaformacion.ficha, aprendiz.tipoDocumento, aprendiz.nombreAprendiz, 
+aprendiz.apellidoAprendiz, aprendiz.estado FROM aprendiz 
+INNER JOIN programaformacion ON aprendiz.idProgramaFormacion = programaformacion.idProgramaFormacion;
+
+INSTRUCTOR
+SELECT instructor.numeroDocumento, instructor.nombreInstructor, instructor.apellidoInstructor FROM instructor;
+
+FASES
+SELECT nombre, competencia FROM fase;
+
+FASE POR INSTRUCTOR
+SELECT fase.nombre AS fase, proyecto.nombreProyecto AS proyecto, CONCAT(instructor.nombreInstructor, ' ',  instructor.apellidoInstructor) AS instructor FROM proyecto
+INNER JOIN instructor ON proyecto.idInstructor = instructor.idInstructor
+INNER JOIN fase ON instructor.idFase = fase.idFase;
+
+PARTICIPANTES
+SELECT aprendiz.numeroDocumento AS documento, CONCAT(aprendiz.nombreAprendiz, ' ', aprendiz.apellidoAprendiz) AS aprendiz, proyecto.nombreProyecto AS proyecto FROM proyecto
+INNER JOIN aprendiz ON proyecto.idAprendiz = aprendiz.idAprendiz;
+
+FICHA PROYECTO
+SELECT programaformacion.ficha, proyecto.nombreProyecto, proyecto.cliente, programaformacion.nombrePrograma AS programaFormacion, proyecto.estado FROM proyecto
+INNER JOIN aprendiz ON proyecto.idAprendiz = aprendiz.idAprendiz
+INNER JOIN programaformacion ON aprendiz.idProgramaFormacion = programaformacion.idProgramaFormacion;
+
+BUSCADOR 
+SELECT proyecto.nombreProyecto, programaformacion.ficha FROM proyecto 
+INNER JOIN aprendiz ON proyecto.idAprendiz = aprendiz.idAprendiz 
+INNER JOIN programaformacion ON aprendiz.idProgramaFormacion = programaformacion.idProgramaFormacion 
+WHERE nombreProyecto LIKE '%variable%' OR ficha LIKE '%variable%';

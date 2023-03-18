@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-03-2023 a las 00:50:01
+-- Tiempo de generación: 18-03-2023 a las 01:39:36
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `sgpf_db`
+-- Base de datos: `sgpf`
 --
 
 -- --------------------------------------------------------
@@ -34,20 +34,19 @@ CREATE TABLE `aprendiz` (
   `apellidoAprendiz` varchar(50) NOT NULL,
   `tipoDocumento` varchar(10) NOT NULL,
   `numeroDocumento` varchar(30) NOT NULL,
-  `estado` varchar(15) NOT NULL,
-  `idUsuario` int(11) NOT NULL
+  `estado` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `aprendiz`
 --
 
-INSERT INTO `aprendiz` (`idAprendiz`, `idProgramaFormacion`, `nombreAprendiz`, `apellidoAprendiz`, `tipoDocumento`, `numeroDocumento`, `estado`, `idUsuario`) VALUES
-(1, 1, 'Juan Camilo', 'Ramírez', 'CC', '1279871', 'En formación', 4),
-(2, 2, 'Natalia', 'Piña', 'CC', '6451323265', 'Cancelado', 5),
-(3, 3, 'Jonathan', 'Gallego', 'CC', '453213.', 'Condicionado', 6),
-(4, 4, 'Kevin', 'Cifuentes', 'TI', '513513', 'Traslado', 7),
-(5, 1, 'Alan', 'Rendón', 'CC', '513161', 'Retirado', 8);
+INSERT INTO `aprendiz` (`idAprendiz`, `idProgramaFormacion`, `nombreAprendiz`, `apellidoAprendiz`, `tipoDocumento`, `numeroDocumento`, `estado`) VALUES
+(1, 1, 'Juan Camilo', 'Ramírez', 'CC', '1279871', 'En formación'),
+(2, 2, 'Natalia', 'Piña', 'CC', '6451323265', 'Cancelado'),
+(3, 3, 'Jonathan', 'Gallego', 'CC', '453213.', 'Condicionado'),
+(4, 4, 'Kevin', 'Cifuentes', 'TI', '513513', 'Traslado'),
+(5, 1, 'Alan', 'Rendón', 'CC', '513161', 'Retirado');
 
 -- --------------------------------------------------------
 
@@ -82,7 +81,6 @@ INSERT INTO `fase` (`idFase`, `nombre`, `competencia`) VALUES
 
 CREATE TABLE `instructor` (
   `idInstructor` int(11) NOT NULL,
-  `idUsuario` int(11) NOT NULL,
   `nombreInstructor` varchar(50) NOT NULL,
   `apellidoInstructor` varchar(50) NOT NULL,
   `tipoDocumento` varchar(10) NOT NULL,
@@ -93,9 +91,9 @@ CREATE TABLE `instructor` (
 -- Volcado de datos para la tabla `instructor`
 --
 
-INSERT INTO `instructor` (`idInstructor`, `idUsuario`, `nombreInstructor`, `apellidoInstructor`, `tipoDocumento`, `numeroDocumento`) VALUES
-(1, 2, 'Diego', 'López', 'CC', '526513321'),
-(2, 3, 'Martha', 'Gómez', 'CC', '5165163351');
+INSERT INTO `instructor` (`idInstructor`, `nombreInstructor`, `apellidoInstructor`, `tipoDocumento`, `numeroDocumento`) VALUES
+(1, 'Diego', 'López', 'CC', '526513321'),
+(2, 'Martha', 'Gómez', 'CC', '5165163351');
 
 -- --------------------------------------------------------
 
@@ -277,8 +275,7 @@ INSERT INTO `usuario` (`idUsuario`, `idRol`, `usuario`, `contrasena`, `estado`) 
 -- Indices de la tabla `aprendiz`
 --
 ALTER TABLE `aprendiz`
-  ADD PRIMARY KEY (`idAprendiz`,`idProgramaFormacion`,`idUsuario`),
-  ADD KEY `fk_aprendiz_usuario1_idx` (`idUsuario`),
+  ADD PRIMARY KEY (`idAprendiz`,`idProgramaFormacion`),
   ADD KEY `fk_aprendiz_programaFormacion1_idx` (`idProgramaFormacion`);
 
 --
@@ -291,8 +288,7 @@ ALTER TABLE `fase`
 -- Indices de la tabla `instructor`
 --
 ALTER TABLE `instructor`
-  ADD PRIMARY KEY (`idInstructor`,`idUsuario`),
-  ADD KEY `fk_instructor_usuario1_idx` (`idUsuario`);
+  ADD PRIMARY KEY (`idInstructor`);
 
 --
 -- Indices de la tabla `objetivosespecificos`
@@ -403,14 +399,7 @@ ALTER TABLE `usuario`
 -- Filtros para la tabla `aprendiz`
 --
 ALTER TABLE `aprendiz`
-  ADD CONSTRAINT `fk_aprendiz_programaFormacion1` FOREIGN KEY (`idProgramaFormacion`) REFERENCES `programaformacion` (`idProgramaFormacion`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_aprendiz_usuario1` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Filtros para la tabla `instructor`
---
-ALTER TABLE `instructor`
-  ADD CONSTRAINT `fk_instructor_usuario1` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_aprendiz_programaFormacion1` FOREIGN KEY (`idProgramaFormacion`) REFERENCES `programaformacion` (`idProgramaFormacion`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `objetivosespecificos`
