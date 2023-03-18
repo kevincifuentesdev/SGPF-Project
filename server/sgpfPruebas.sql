@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-03-2023 a las 01:39:36
+-- Tiempo de generación: 18-03-2023 a las 04:01:49
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -93,7 +93,8 @@ CREATE TABLE `instructor` (
 
 INSERT INTO `instructor` (`idInstructor`, `nombreInstructor`, `apellidoInstructor`, `tipoDocumento`, `numeroDocumento`) VALUES
 (1, 'Diego', 'López', 'CC', '526513321'),
-(2, 'Martha', 'Gómez', 'CC', '5165163351');
+(2, 'Martha', 'Gómez', 'CC', '2048dsf'),
+(3, 'Carlos', 'Gómez', 'CC', '45a4faafs');
 
 -- --------------------------------------------------------
 
@@ -119,7 +120,8 @@ INSERT INTO `objetivosespecificos` (`idObjetivosEspecificos`, `idProyecto`, `obj
 (5, 2, 'que nos sirva'),
 (6, 3, 'Para mostrar'),
 (7, 3, 'Que la BD funcione'),
-(8, 4, 'De manera correcta');
+(8, 4, 'De manera correcta'),
+(9, 5, 'Continuación');
 
 -- --------------------------------------------------------
 
@@ -173,6 +175,7 @@ INSERT INTO `programaformacion` (`idProgramaFormacion`, `nombrePrograma`, `ficha
 
 CREATE TABLE `proyecto` (
   `idProyecto` int(11) NOT NULL,
+  `idProgramaFormacion` int(11) NOT NULL,
   `nombreProyecto` varchar(80) NOT NULL,
   `objetivoGeneral` varchar(255) NOT NULL,
   `estado` varchar(15) NOT NULL,
@@ -188,11 +191,12 @@ CREATE TABLE `proyecto` (
 -- Volcado de datos para la tabla `proyecto`
 --
 
-INSERT INTO `proyecto` (`idProyecto`, `nombreProyecto`, `objetivoGeneral`, `estado`, `planteamientoProblema`, `justificacion`, `funcionalidades`, `alcances`, `archivo`, `cliente`) VALUES
-(1, 'Desarrollo de app', 'Crear una app móvil', 'Aprobado', 'Se necesita la App', 'No hay App', 'Tres pantallas funcionales', 'Que funcione', 'No hay', 'SENA'),
-(2, 'Construcción de algo', 'Funcionando', 'Reprobado', 'No hay', 'Crearla', 'La construcción', 'Creación', 'archivo.docx', 'Noel'),
-(3, 'Algún proceso', 'Que no existe', 'Aprobado', 'Y que sirva', 'Para lo que se necesita', 'Aún en proceso', 'Terminar', 'aqui.com', 'Empresa'),
-(4, 'Computación', 'Organizar', 'Por ajustar', 'Necesario', 'Para mantenimiento', 'Mejor 3 equipos', 'De color blanco', 'blanco.pdf', 'Crear');
+INSERT INTO `proyecto` (`idProyecto`, `idProgramaFormacion`, `nombreProyecto`, `objetivoGeneral`, `estado`, `planteamientoProblema`, `justificacion`, `funcionalidades`, `alcances`, `archivo`, `cliente`) VALUES
+(1, 1, 'Desarrollo de app', 'Crear una app móvil', 'Aprobado', 'Se necesita la App', 'No hay App', 'Tres pantallas funcionales', 'Que funcione', 'No hay', 'SENA'),
+(2, 1, 'Construcción de algo', 'Funcionando', 'Reprobado', 'No hay', 'Crearla', 'La construcción', 'Creación', 'archivo.docx', 'Noel'),
+(3, 2, 'Algún proceso', 'Que no existe', 'Aprobado', 'Y que sirva', 'Para lo que se necesita', 'Aún en proceso', 'Terminar', 'aqui.com', 'Empresa'),
+(4, 3, 'Computación', 'Organizar', 'Por ajustar', 'Necesario', 'Para mantenimiento', 'Mejor 3 equipos', 'De color blanco', 'blanco.pdf', 'Crear'),
+(5, 4, 'Contar historias', 'Interesantes', 'Creativas', 'Novedosas', 'Para entretener', 'A muchas personas', 'Desparchadas', 'cuenteria.com', 'EnLaSombra');
 
 -- --------------------------------------------------------
 
@@ -214,7 +218,8 @@ INSERT INTO `proyecto_instructor` (`idProyecto`, `idInstructor`, `idFase`) VALUE
 (1, 1, 1),
 (2, 1, 3),
 (3, 2, 5),
-(4, 2, 6);
+(4, 2, 6),
+(5, 3, 4);
 
 -- --------------------------------------------------------
 
@@ -235,8 +240,7 @@ CREATE TABLE `rol` (
 INSERT INTO `rol` (`idRol`, `rol`, `codigo`) VALUES
 (1, 'Administrador', '1'),
 (2, 'Instructor', '2'),
-(3, 'Aprendiz', '3'),
-(4, 'Invitado', '4');
+(3, 'Aprendiz', '3');
 
 -- --------------------------------------------------------
 
@@ -265,7 +269,7 @@ INSERT INTO `usuario` (`idUsuario`, `idRol`, `usuario`, `contrasena`, `estado`) 
 (6, 3, 'John', '674ujb', 'Activo'),
 (7, 3, 'Nuevo', '65312.', 'Inactivo'),
 (8, 3, 'comoquesi', 'lbhabhñg', 'Activo'),
-(9, 4, 'Invitado', '824pib', 'Inactivo');
+(9, 3, 'Invitado', '824pib', 'Inactivo');
 
 --
 -- Índices para tablas volcadas
@@ -309,13 +313,15 @@ ALTER TABLE `participantes`
 -- Indices de la tabla `programaformacion`
 --
 ALTER TABLE `programaformacion`
-  ADD PRIMARY KEY (`idProgramaFormacion`);
+  ADD PRIMARY KEY (`idProgramaFormacion`),
+  ADD UNIQUE KEY `ficha_UNIQUE` (`ficha`);
 
 --
 -- Indices de la tabla `proyecto`
 --
 ALTER TABLE `proyecto`
-  ADD PRIMARY KEY (`idProyecto`);
+  ADD PRIMARY KEY (`idProyecto`,`idProgramaFormacion`),
+  ADD KEY `fk_proyecto_programaFormacion1_idx` (`idProgramaFormacion`);
 
 --
 -- Indices de la tabla `proyecto_instructor`
@@ -359,13 +365,13 @@ ALTER TABLE `fase`
 -- AUTO_INCREMENT de la tabla `instructor`
 --
 ALTER TABLE `instructor`
-  MODIFY `idInstructor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idInstructor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `objetivosespecificos`
 --
 ALTER TABLE `objetivosespecificos`
-  MODIFY `idObjetivosEspecificos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idObjetivosEspecificos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `programaformacion`
@@ -377,13 +383,13 @@ ALTER TABLE `programaformacion`
 -- AUTO_INCREMENT de la tabla `proyecto`
 --
 ALTER TABLE `proyecto`
-  MODIFY `idProyecto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idProyecto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `rol`
 --
 ALTER TABLE `rol`
-  MODIFY `idRol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idRol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
@@ -413,6 +419,12 @@ ALTER TABLE `objetivosespecificos`
 ALTER TABLE `participantes`
   ADD CONSTRAINT `fk_aprendiz_has_fichaProyecto_aprendiz1` FOREIGN KEY (`idAprendiz`) REFERENCES `aprendiz` (`idAprendiz`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_aprendiz_has_fichaProyecto_fichaProyecto1` FOREIGN KEY (`idProyecto`) REFERENCES `proyecto` (`idProyecto`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `proyecto`
+--
+ALTER TABLE `proyecto`
+  ADD CONSTRAINT `fk_proyecto_programaFormacion1` FOREIGN KEY (`idProgramaFormacion`) REFERENCES `programaformacion` (`idProgramaFormacion`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `proyecto_instructor`
