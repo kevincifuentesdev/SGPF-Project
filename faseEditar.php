@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;800&display=swap" rel="stylesheet">
-    <title>Fase</title>
+    <title>Editar Fase</title>
 </head>
 
 <body>
@@ -36,7 +36,7 @@
     </nav>
     <main>
         <div class="form-container">
-            <h2 class="title-form">Nueva Fase</h2>
+            <h2 class="title-form">Editar Datos Fase</h2>
             <form action="" class="form-nuevo-proyecto">
                 <label for="nombre">Nombre:</label>
                 <input class="input" type="text" name="nombre" placeholder="Ingrese nombre de la fase" id="">
@@ -44,7 +44,7 @@
                 <label for="titulo">Competencia:</label>
                 <input class="input" type="text" name="titulo" placeholder="Ingrese competencia" id="">
                 <div class="btns-container">
-                    <input class="input-submit-registrar" type="submit" value="Registrar">
+                    <input class="input-submit-registrar" type="submit" value="Actualizar">
                     <input class="input-submit-limpiar " type="submit" value="Limpiar">
                 </div>
             </form>

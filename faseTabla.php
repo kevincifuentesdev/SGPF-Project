@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/fase.css">
+    <link rel="stylesheet" href="./css/faseTabla.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;800&display=swap" rel="stylesheet">
-    <title>Fase</title>
+    <title>Tabla Fase</title>
 </head>
 
 <body>
@@ -20,12 +20,11 @@
             <hr>
             <h2>Sistema de gestión de<br> proyectos formativos SENA</h2>
         </div>
-        <div class="usuario">
-            <span>¡Bienvenido Administrador!</span>
-            <img src="./img/icons/user.png" alt="user">
+        <div  class="iconoHamburguesa menu" id="menu" >
+            <img src="./img/icons/hamburguesa.png" alt="logo_sena" width="30" height="30">
         </div>
     </header>
-    <nav>
+    <nav id="navega">
         <ul>
             <li><a href="">Aprendiz</a></li>
             <li><a href="">Participantes</a></li>
@@ -41,55 +40,58 @@
             <form action="/buscar" method="GET">
                 <input type="search" id="buscar" name="buscar" placeholder="Buscar por nombre o documento">
                 <button type="submit">Buscar</button><hr>
-                <u><a href="*">Nueva fase</a></u>
             </form>
+            <a href="./faseAgregar.php"><h2>Nueva Fase</h2></a>
             <table cellspacing="0">
                 <thead>
                     <tr>
                         <th>Fase</th>
                         <th>Competencia</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Planeacion</td>
                         <td>Codificacion de software</td>
-                        <td></td>
-                        <td></td>
-                        <td> </td>
-                        <td>
-                            <span>editar</span>
-                            <span>ver detalle</span>
-                            <span>borrar</span>
+                        <td class="container-action-btns">
+                            <a href="./faseEditar.php"><button class="btn-editar">Editar</button></a>
+                            <button class="btn-detalle">Ver detalle</button>
+                            <button class="btn-borrar">Borrar</button>
                         </td>
                     </tr>
-
+                    <tr>
+                        <td>Planeacion</td>
+                        <td>Codificacion de software</td>
+                        <td class="container-action-btns">
+                            <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
+                            <button class="btn-detalle">Ver detalle</button>
+                            <button class="btn-borrar">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Planeacion</td>
+                        <td>Codificacion de software</td>
+                        <td class="container-action-btns">
+                            <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
+                            <button class="btn-detalle">Ver detalle</button>
+                            <button class="btn-borrar">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Planeacion</td>
+                        <td>Codificacion de software</td>
+                        <td class="container-action-btns">
+                            <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
+                            <button class="btn-detalle">Ver detalle</button>
+                            <button class="btn-borrar">Borrar</button>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
-        <div class="form-container">
-            <h2 class="title-form">Nuevo Fase</h2>
-            <form action="" class="form-nuevo-proyecto">
-                <label for="nombre">Nombre:</label>
-                <input class="input" type="text" name="nombre" placeholder="Planeacion" id="">
-
-                <label for="titulo">Competencia:</label>
-                <input class="input" type="text" name="titulo" placeholder="Codificacion de software" id="">
-
-
-
-                <div class="btns-container">
-                    <input class="input-submit-registrar" type="submit" value="Registrar">
-                    <input class="input-submit-limpiar " type="submit" value="Limpiar">
-                </div>
-            </form>
-        </div>
     </main>
-
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
