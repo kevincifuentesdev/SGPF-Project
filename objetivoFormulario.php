@@ -45,10 +45,10 @@
             <h2 class="title-form">Nuevo Objetivo</h2>
             <form action="" class="form-nuevo-proyecto">
                 <label for="objetivo">Objetivo Especifico:</label>
-                <input class="input" type="text" name="objetivo" placeholder="Ingrese ficha" id="">
+                <input class="input" type="text" name="objetivo" placeholder="Ingrese el objetivo" id="">
 
                 <label for="proyecto">Proyecto:</label>
-                <input class="input" type="text" name="proyecto" placeholder="Ingrese su numero de documento" id="">
+                <input class="input" type="text" name="proyecto" value="nombre proyecto" id="" readonly>
 
                 <div class="btns-container">
                     <input class="input-submit-registrar" type="submit" value="Registrar">
