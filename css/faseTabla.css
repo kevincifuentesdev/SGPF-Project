@@ -279,7 +279,7 @@ tr:nth-child(2n) {
 
   table {
     width: 90%;
-    display: block;
+    display: inline-table;
     overflow-x: auto;
   }
 
@@ -331,5 +331,9 @@ tr:nth-child(2n) {
 
   button[type="submit"] {
     width: 70%;
+  }
+
+  table {
+    display: block;
   }
 }

@@ -279,7 +279,7 @@
   
     table {
       width: 90%;
-      display: block;
+      display: table;
       overflow-x: auto;
     }
   
@@ -320,6 +320,18 @@
     nav ul{
       flex-direction: column;
     }
+
+    .container-action-btns {
+      width: auto;
+    }
+
+    .btn-editar {
+      width: 47%;
+    }
+
+    .btn-borrar {
+      width: 47%;
+    }
   }
   
   /* Responsive Celular */
@@ -331,6 +343,18 @@
   
     button[type="submit"] {
       width: 70%;
+    }
+
+    .container-action-btns {
+      width: auto;
+    }
+
+    .btn-editar {
+      width: 93%;
+    }
+
+    .btn-borrar {
+      width: 93%;
     }
   }
   

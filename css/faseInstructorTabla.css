@@ -314,7 +314,7 @@ tr:nth-child(2n) {
     width:100%;
     max-height:0px;
     overflow:hidden;
-    transition: 1s all; 
+    transition: 1s all;
   }
 
   nav ul{
@@ -331,5 +331,11 @@ tr:nth-child(2n) {
 
   button[type="submit"] {
     width: 70%;
+  }
+
+  table {
+    width: 90%;
+    display: block;
+    overflow-x: auto;
   }
 }
