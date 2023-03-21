@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/instructores.css">
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,700;1,900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Formulario Instructores</title>
 </head>
 <body>
   <header>
@@ -17,10 +18,9 @@
       
       <h2>Sistema de gestión de<br> proyectos formativos SENA</h2>
     </div>
-
-  <div  class="iconoHamburguesa menu" id="menu" >
-    <img src="./img/icons/hamburguesa.png" alt="logo_sena" width="30" height="30">
-  </div>
+    <div  class="iconoHamburguesa menu" id="menu" >
+      <img src="./img/icons/hamburguesa.png" alt="logo_sena" width="30" height="30">
+    </div>
   </header>
   <nav id="navega">
     <ul >
@@ -32,22 +32,22 @@
       <li><a href="">Fases Instructor</a></li>
     </ul>
   </nav>
-
-  <section class="form-container section2">
-    <form action="">
-      <h2>Nuevo Instructor</h2>
-    <label for="user"      >Cedula:</label>
-    <input class="input" type="text" name="user" placeholder="Ingrese Cedula" id="">
-    <label for="Name">Nombre:</label>
-    <input class="input" type="text" name="user" placeholder="Ingrese Nombre" id="">
-    <div class="submit-buttons">
-        <input class="input-submit-registrar" type="submit" value="Registrar">
-        <input class="input-submit-limpiar" type="submit" value="Limpiar">
+  <main>
+    <div class="form-container">
+      <h2 class="title-form">Nuevo Instructor</h2>
+      <form action="" class="form-nuevo-proyecto">
+        <label for="nombre">Nombre:</label>
+        <input class="input" type="text" name="nombre" placeholder="Ingrese nombre" id="">
+        <label for="nroDocumento">Numero de documento:</label>
+        <input class="input" type="text" name="nroDocumento" placeholder="Ingrese su numero de documento" id="">
+        
+        <div class="btns-container">
+            <input class="input-submit-registrar" type="submit" value="Registrar">
+            <input class="input-submit-limpiar" type="submit" value="Limpiar">
+        </div>
+       </form>
     </div>
-    
-    </form>
-  </section>
-
+  </main>
   <script src="./js/script.js"></script>
 </body>
 </html>

@@ -9,8 +9,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;800&display=swap" rel="stylesheet">
     <!-- Icons -->
-    <script src="https://kit.fontawesome.com/bae32d9248.js" crossorigin="anonymous"></script>
-    <title>Ficha Instructor</title>
+    <title>Tabla Instructores</title>
 </head>
 <body>
     <header>
@@ -20,9 +19,9 @@
           <h2>Sistema de gestión de<br> proyectos formativos SENA</h2>
         </div>
     
-      <div  class="iconoHamburguesa menu" id="menu" >
-        <img src="./img/icons/hamburguesa.png" alt="logo_sena" width="30" height="30">
-      </div>
+        <div  class="iconoHamburguesa menu" id="menu" >
+            <img src="./img/icons/hamburguesa.png" alt="logo_sena" width="30" height="30">
+        </div>
       </header>
       <nav id="navega">
         <ul >
@@ -38,44 +37,58 @@
         <div class="container-tabla">
         <h2 class="title-tabla">Datos Instructor</h2>
         <form action="/buscar" method="GET">
-        <input type="search" id="buscar" name="buscar" placeholder="Buscar por nombre o documento">
-        <button type="submit">Buscar</button>
-        <a href="./instructorAgregar.php"><h2>Nuevo Instructor</h2></a>
-    </form>
-    <table cellspacing="0">
-        <thead>
-        <tr>
-            <th>Cédula</th>
-            <th>Nombre</th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
+            <input type="search" id="buscar" name="buscar" placeholder="Buscar por nombre o documento">
+            <button type="submit">Buscar</button>
+        </form>
+        <a href="./instructoresAgregar.php"><h2>Nuevo Instructor</h2></a>
+        <table cellspacing="0">
+            <thead>
             <tr>
-                <td>939393</td>
-                <td>Carlos Gomez</td>
-                <td>
-                <span><a href="./instructoresEditar.html">editar</a></span>
-                <span>ver detalle</span>
-                <span>borrar</span>
-            </td>
-        </tr>
-        <tr>
-                <td>55436</td>
-                <td>Marta Gomez</td>
-                <td>
-                <span><a href="./instructoresEditar.html">editar</a></span>
-                <span>ver detalle</span>
-                <span>borrar</span>
-            </td>
-        </tr>
-    </tbody>
-</table>
-    </div>
+                <th>Cédula</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>939393</td>
+                    <td>Carlos Gomez</td>
+                    <td class="container-action-btns">
+                        <a href="./instructoresEditar.php"><button class="btn-editar">Editar</button></a>
+                        <button class="btn-detalle">Ver detalle</button>
+                        <button class="btn-borrar">Borrar</button>
+                </td>
+                </tr>
+                <tr>
+                    <td>939393</td>
+                    <td>Carlos Gomez</td>
+                    <td class="container-action-btns">
+                        <a href="./instructoresEditar.php"><button class="btn-editar">Editar</button></a>
+                        <button class="btn-detalle">Ver detalle</button>
+                        <button class="btn-borrar">Borrar</button>
+                </td>
+                </tr>
+                <tr>
+                    <td>939393</td>
+                    <td>Carlos Gomez</td>
+                    <td class="container-action-btns">
+                        <a href="./instructoresEditar.php"><button class="btn-editar">Editar</button></a>
+                        <button class="btn-detalle">Ver detalle</button>
+                        <button class="btn-borrar">Borrar</button>
+                </td>
+                </tr>
+                <tr>
+                    <td>939393</td>
+                    <td>Carlos Gomez</td>
+                    <td class="container-action-btns">
+                        <a href="./instructoresEditar.php"><button class="btn-editar">Editar</button></a>
+                        <button class="btn-detalle">Ver detalle</button>
+                        <button class="btn-borrar">Borrar</button>
+                </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
     
 </main>
 
