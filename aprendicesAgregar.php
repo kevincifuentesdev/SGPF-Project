@@ -1,3 +1,30 @@
+<?php
+session_start();
+include 'conexion.php';
+if (isset($_POST['Registrar'])) {
+  $ficha = $_POST['ficha'];
+  $documento = $_POST['tipoDocumento'];
+  $nroDocumento = $_POST['numeroDocumento'];
+  $nombre = $_POST['nombreAprendiz'];
+  $apellido = $_POST['apellidoAprendiz'];
+  $estado = $_POST['estado'];
+
+  $queryIdProgramaFormacion = "SELECT idProgramaFormacion FROM programaformacion WHERE ficha = $ficha;";
+  $resultQueryIdPrograma = mysqli_query($conn, $queryIdProgramaFormacion);
+  $listIdProgramaFormacion = mysqli_fetch_assoc($resultQueryIdPrograma);
+  $idProgramaFormacion = $listIdProgramaFormacion['idProgramaFormacion'];
+
+  $insertAprendiz = "INSERT INTO aprendiz(idProgramaFormacion, nombreAprendiz, apellidoAprendiz, tipoDocumento, numeroDocumento, estado) VALUES($idProgramaFormacion, '$nombre', '$apellido', '$documento', '$nroDocumento', '$estado');";
+  $resultInsertAprendiz = mysqli_query($conn, $insertAprendiz);
+  echo "<script>alert('Se registró exitosamente');window.location ='aprendicesAgregar.php'</script>";
+}
+
+$queryFicha = "SELECT ficha FROM programaFormacion;";
+$resultadoQueryFicha = mysqli_query($conn, $queryFicha);
+$filasFicha = mysqli_fetch_assoc($resultadoQueryFicha);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +55,7 @@
   </header>
   <nav id="navega">
     <ul>
-      <li><a href="">Aprendiz</a></li>
+      <li><a href="./aprendicesTabla.php">Aprendiz</a></li>
       <li><a href="">Participantes</a></li>
       <li><a href="">Ficha proyecto</a></li>
       <li><a href="">Fases</a></li>
@@ -39,39 +66,46 @@
   <main>
     <div class="form-container">
       <h2 class="title-form">Nuevo Aprendiz</h2>
-      <form action="" class="form-nuevo-proyecto">
+      <form action="aprendicesAgregar.php" method="POST" class="form-nuevo-proyecto">
         <label for="ficha">Ficha:</label>
-        <input class="input" type="text" name="ficha" placeholder="Ingrese ficha" id="">
-
-        <label for="documento">Tipo de documento:</label>
-        <select name="documento" id="documento">
-          <option value="aprobado">C.C</option>
-          <option value="reprobado">T.I</option>
-          <option value="ajustar">PEP</option>
+      <datalist id="ficha">
+        <?php while ($filasFicha) { ?>
+            <option value="<?php echo $filasFicha['ficha'] ?>"></option>
+        <?php   
+            $filasFicha = mysqli_fetch_assoc($resultadoQueryFicha);
+            } ?>
+        </datalist>
+        <input class="input" type="text" name="ficha" id="" list="ficha">
+            
+        <label for="tipoDocumento">Tipo de documento:</label>
+        <select name="tipoDocumento" id="tipoDocumento">
+          <option value="CC">CC</option>
+          <option value="TI">TI</option>
+          <option value="PEP">PEP</option>
         </select>
   
-        <label for="nroDocumento">Numero de documento:</label>
-        <input class="input" type="text" name="nroDocumento" placeholder="Ingrese su numero de documento" id="">
+        <label for="numeroDocumento">Numero de documento:</label>
+        <input class="input" type="text" name="numeroDocumento" placeholder="Ingrese el número de documento" id="">
         
-        <label for="nombre">Nombre:</label>
-        <input class="input" type="text" name="nombre" placeholder="Ingrese nombre" id="">
+        <label for="nombreAprendiz">Nombre:</label>
+        <input class="input" type="text" name="nombreAprendiz" placeholder="Ingrese el nombre" id="">
 
   
-        <label for="apeliido">Apellido:</label>
-        <input class="input" type="text" name="apeliido" placeholder="Ingrese apeliido" id="">
+        <label for="apellidoAprendiz">Apellido:</label>
+        <input class="input" type="text" name="apellidoAprendiz" placeholder="Ingrese el apellido" id="">
 
         <label for="estado">Estado:</label>
         <select name="estado" id="estado">
-          <option value="aprobado">Formación</option>
-          <option value="reprobado">Condicional</option>
-          <option value="ajustar">Cancelado</option>
-          <option value="ajustar">Traslado</option>
-          <option value="ajustar">Retirado</option>
+          <option value="enFormacion">En formación</option>
+          <option value="Condicional">Condicional</option>
+          <option value="Cancelado">Cancelado</option>
+          <option value="Traslado">Traslado</option>
+          <option value="Retirado">Retirado</option>
         </select>
   
         <div class="btns-container">
-          <input class="input-submit-registrar" type="submit" value="Registrar">
-          <input class="input-submit-limpiar " type="submit" value="Limpiar">
+          <input class="input-submit-registrar" type="submit" value="Registrar" name="Registrar">
+          <input class="input-submit-limpiar " type="reset" value="Limpiar">
         </div>
       </form>
     </div>

@@ -29,7 +29,6 @@
         $estado = $_POST['estado'];
         $queryAprendiz = "UPDATE aprendiz SET tipoDocumento = '$documento', numeroDocumento = '$nroDocumento', nombreAprendiz = '$nombre', apellidoAprendiz = '$apellido', estado = '$estado' WHERE idAprendiz = $id";
         mysqli_query($conn, $queryAprendiz);
-        echo "<script>alert('Se actualizó exitosamente');window.location ='aprendicesTabla.php'</script>";
     }
     ?>
 
@@ -77,41 +76,33 @@
         </nav>
         <main>
             <div class="form-container">
-                <h2 class="title-form">Editar Datos Aprendiz</h2>
+                <h2 class="title-form">Detalle Aprendiz</h2>
                 <form action='aprendicesEditar.php?idAprendiz=<?php echo $_GET ['idAprendiz']; ?>' method = "POST" class="form-nuevo-proyecto">
                     <label for="ficha">Ficha:</label>
                     <input class="input" type="text" name="ficha" value="<?php echo $ficha;?>" id="ficha" disabled>
 
                     <label for='tipoDocumento'>Tipo de documento:</label>
-                    <select name='tipoDocumento' id='tipoDocumento'>
+                    <select name='tipoDocumento' id='tipoDocumento'  disabled>
                         <option value="<?php echo $documento;?>" selected><?php echo $documento;?></option>
-                        <option value="CC">CC</option>
-                        <option value="TI">TI</option>
-                        <option value="PEP">PEP</option>
                     </select>
 
                     <label for='numeroDocumento'>Numero de documento:</label>
-                    <input class="input" type="text" name='numeroDocumento' value="<?php echo $nroDocumento;?>" id="">
+                    <input class="input" type="text" name='numeroDocumento' value="<?php echo $nroDocumento;?>" id="" disabled>
 
                     <label for='nombreAprendiz'>Nombre:</label>
-                    <input class="input" type="text" name='nombreAprendiz' value="<?php echo $nombre;?>" id="">
+                    <input class="input" type="text" name='nombreAprendiz' value="<?php echo $nombre;?>" id="" disabled>
 
 
                     <label for='apellidoAprendiz'>Apellido:</label>
-                    <input class="input" type="text" name='apellidoAprendiz' value="<?php echo $apellido;?>" id="">
+                    <input class="input" type="text" name='apellidoAprendiz' value="<?php echo $apellido;?>" id="" disabled>
 
                     <label for="estado">Estado:</label>
-                    <select name="estado" value="<?php echo $estado;?>" id="estado">
+                    <select name="estado" value="<?php echo $estado;?>" id="estado" disabled>
                     <option value="<?php echo $estado;?>" selected><?php echo $estado;?></option>
-                        <option value="Formación">Formación</option>
-                        <option value="Condicional">Condicional</option>
-                        <option value="Cancelado">Cancelado</option>
-                        <option value="Traslado">Traslado</option>
-                        <option value="Retirado">Retirado</option>
                     </select>
 
-                    <div class="btns-container">
-                        <input class="input-submit-registrar" type="submit" value="Actualizar" name="Actualizar">
+                    <div class="btns-container" >
+                        <a href="./aprendicesTabla.php"><button type="button" class="btn-detalle input-submit-registrar-1" >Regresar</button></a>
                     </div>
                 </form>
             </div>
