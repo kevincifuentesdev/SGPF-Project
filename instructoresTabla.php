@@ -54,38 +54,32 @@
                     <td>939393</td>
                     <td>Carlos Gomez</td>
                     <td class="container-action-btns">
-                        <a href="./instructoresEditar.php"><button class="btn-editar">Editar</button></a>
-                        <button class="btn-detalle">Ver detalle</button>
-                        <button class="btn-borrar">Borrar</button>
-                </td>
+                        <a class="aIconos" href="./instructoresEditar.php"><img src="./img/icons/edit-icono.png" alt=""></a>
+                        <a class="aIconos" href=""><img src="./img/icons/buscar-icono.png" alt=""></a>
+                        <a class="aIconos" href=""><img src="./img/icons/borrar-icono.png" alt=""></a>
+                    </td>
                 </tr>
+
                 <tr>
                     <td>939393</td>
                     <td>Carlos Gomez</td>
                     <td class="container-action-btns">
-                        <a href="./instructoresEditar.php"><button class="btn-editar">Editar</button></a>
-                        <button class="btn-detalle">Ver detalle</button>
-                        <button class="btn-borrar">Borrar</button>
-                </td>
+                        <a class="aIconos" href="./instructoresEditar.php"><img src="./img/icons/edit-icono.png" alt=""></a>
+                        <a class="aIconos" href=""><img src="./img/icons/buscar-icono.png" alt=""></a>
+                        <a class="aIconos" href=""><img src="./img/icons/borrar-icono.png" alt=""></a>
+                    </td>
                 </tr>
+
                 <tr>
                     <td>939393</td>
                     <td>Carlos Gomez</td>
                     <td class="container-action-btns">
-                        <a href="./instructoresEditar.php"><button class="btn-editar">Editar</button></a>
-                        <button class="btn-detalle">Ver detalle</button>
-                        <button class="btn-borrar">Borrar</button>
-                </td>
-                </tr>
-                <tr>
-                    <td>939393</td>
-                    <td>Carlos Gomez</td>
-                    <td class="container-action-btns">
-                        <a href="./instructoresEditar.php"><button class="btn-editar">Editar</button></a>
-                        <button class="btn-detalle">Ver detalle</button>
-                        <button class="btn-borrar">Borrar</button>
-                </td>
-                </tr>
+                        <a class="aIconos" href="./instructoresEditar.php"><img src="./img/icons/edit-icono.png" alt=""></a>
+                        <a class="aIconos" href=""><img src="./img/icons/buscar-icono.png" alt=""></a>
+                        <a class="aIconos" href=""><img src="./img/icons/borrar-icono.png" alt=""></a>
+                    </td>
+                </tr>   
+                
             </tbody>
             </table>
         </div>

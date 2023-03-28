@@ -133,7 +133,7 @@
     gap: 20px;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 100%;
     align-self: start;
   }
   
@@ -212,14 +212,11 @@
   .container-action-btns {
     display: flex;
     align-items: center;
-    flex-direction: column;
     gap: 10px;
-    width: max-content;
+    justify-content: center;
+  
   }
 
-  .container-action-btns > a {
-    width: 100%;
-  }
   
   .btn-editar {
     color: #ffffff;
@@ -263,6 +260,22 @@
   tr:nth-child(2n) {
     background-color: #dfdfdf;
   }
+
+.aIconos{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.aIconos:hover{
+ background-color: var(--naranja-hover);
+}
+
+.aIconos > img{
+  width: 100%;
+  height: 100%;
+}
   
   
   /* Responsive Table */

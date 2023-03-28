@@ -66,9 +66,9 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
-                                <button class="btn-detalle">Ver detalle</button>
-                                <button class="btn-borrar">Borrar</button>
+                                <a class="aIconos" href="./proyectoEditar.php"><img src="./img/icons/edit-icono.png" alt=""></a>
+                                <a class="aIconos" href=""><img src="./img/icons/buscar-icono.png" alt=""></a>
+                                <a class="aIconos" href=""><img src="./img/icons/borrar-icono.png" alt=""></a>
                             </td>
                         </tr>
                         <tr>
@@ -78,9 +78,9 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
-                                <button class="btn-detalle">Ver detalle</button>
-                                <button class="btn-borrar">Borrar</button>
+                                <a class="aIconos" href="./proyectoEditar.php"><img src="./img/icons/edit-icono.png" alt=""></a>
+                                <a class="aIconos" href=""><img src="./img/icons/buscar-icono.png" alt=""></a>
+                                <a class="aIconos" href=""><img src="./img/icons/borrar-icono.png" alt=""></a>
                             </td>
                         </tr>
                         <tr>
@@ -90,9 +90,9 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
-                                <button class="btn-detalle">Ver detalle</button>
-                                <button class="btn-borrar">Borrar</button>
+                                <a class="aIconos" href="./proyectoEditar.php"><img src="./img/icons/edit-icono.png" alt=""></a>
+                                <a class="aIconos" href=""><img src="./img/icons/buscar-icono.png" alt=""></a>
+                                <a class="aIconos" href=""><img src="./img/icons/borrar-icono.png" alt=""></a>
                             </td>
                         </tr>
                         <tr>
@@ -102,47 +102,13 @@
                             <td>Programacion Software</td>
                             <td>En proceso</td>
                             <td class="container-action-btns">
-                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
-                                <button class="btn-detalle">Ver detalle</button>
-                                <button class="btn-borrar">Borrar</button>
+                                <a class="aIconos" href="./proyectoEditar.php"><img src="./img/icons/edit-icono.png" alt=""></a>
+                                <a class="aIconos" href=""><img src="./img/icons/buscar-icono.png" alt=""></a>
+                                <a class="aIconos" href=""><img src="./img/icons/borrar-icono.png" alt=""></a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>19230</td>
-                            <td>Sgpf</td>
-                            <td>Sena</td>
-                            <td>Programacion Software</td>
-                            <td>En proceso</td>
-                            <td class="container-action-btns">
-                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
-                                <button class="btn-detalle">Ver detalle</button>
-                                <button class="btn-borrar">Borrar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>19230</td>
-                            <td>Sgpf</td>
-                            <td>Sena</td>
-                            <td>Programacion Software</td>
-                            <td>En proceso</td>
-                            <td class="container-action-btns">
-                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
-                                <button class="btn-detalle">Ver detalle</button>
-                                <button class="btn-borrar">Borrar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>19230</td>
-                            <td>Sgpf</td>
-                            <td>Sena</td>
-                            <td>Programacion Software</td>
-                            <td>En proceso</td>
-                            <td class="container-action-btns">
-                                <a href="./proyectoEditar.php"><button class="btn-editar">Editar</button></a>
-                                <button class="btn-detalle">Ver detalle</button>
-                                <button class="btn-borrar">Borrar</button>
-                            </td>
-                        </tr>
+                        
+                        
                     </tbody>
                 </table>
             </div>

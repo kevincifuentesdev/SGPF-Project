@@ -55,38 +55,32 @@
                         <td>Planeacion</td>
                         <td>Codificacion de software</td>
                         <td class="container-action-btns">
-                            <a href="./faseEditar.php"><button class="btn-editar">Editar</button></a>
-                            <button class="btn-detalle">Ver detalle</button>
-                            <button class="btn-borrar">Borrar</button>
+                            <a class="aIconos" href="./faseEditar.php"><img src="./img/icons/edit-icono.png" alt=""></a>
+                            <a class="aIconos" href=""><img src="./img/icons/buscar-icono.png" alt=""></a>
+                            <a class="aIconos" href=""><img src="./img/icons/borrar-icono.png" alt=""></a>
                         </td>
                     </tr>
+
                     <tr>
                         <td>Planeacion</td>
                         <td>Codificacion de software</td>
                         <td class="container-action-btns">
-                            <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
-                            <button class="btn-detalle">Ver detalle</button>
-                            <button class="btn-borrar">Borrar</button>
+                            <a class="aIconos" href="./faseEditar.php"><img src="./img/icons/edit-icono.png" alt=""></a>
+                            <a class="aIconos" href=""><img src="./img/icons/buscar-icono.png" alt=""></a>
+                            <a class="aIconos" href=""><img src="./img/icons/borrar-icono.png" alt=""></a>
                         </td>
                     </tr>
+
                     <tr>
                         <td>Planeacion</td>
                         <td>Codificacion de software</td>
                         <td class="container-action-btns">
-                            <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
-                            <button class="btn-detalle">Ver detalle</button>
-                            <button class="btn-borrar">Borrar</button>
+                            <a class="aIconos" href="./faseEditar.php"><img src="./img/icons/edit-icono.png" alt=""></a>
+                            <a class="aIconos" href=""><img src="./img/icons/buscar-icono.png" alt=""></a>
+                            <a class="aIconos" href=""><img src="./img/icons/borrar-icono.png" alt=""></a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Planeacion</td>
-                        <td>Codificacion de software</td>
-                        <td class="container-action-btns">
-                            <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
-                            <button class="btn-detalle">Ver detalle</button>
-                            <button class="btn-borrar">Borrar</button>
-                        </td>
-                    </tr>
+                   
                 </tbody>
             </table>
         </div>
