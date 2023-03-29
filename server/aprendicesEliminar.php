@@ -13,7 +13,7 @@
             die("query falló");
         }
 
-        echo "<script>alert('Se eliminó exitosamente');window.location ='aprendicesTabla.php'</script>";
+        echo "<script>alert('Se eliminó exitosamente');window.location ='../aprendicesTabla.php'</script>";
         // header("location: aprendicesTabla.php");
     }
 ?>

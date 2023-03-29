@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'conexion.php'; 
+include './server/conexion.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -114,7 +114,7 @@ include 'conexion.php';
                 
                     <a class="aIconos" href="./aprendicesEditar.php?idAprendiz=<?php echo $filasAprendices['idAprendiz'];?>"><img src="./img/icons/edit-icono.png" alt=""></a>
                     <a class="aIconos" href="./aprendicesDetalle.php?idAprendiz=<?php echo $filasAprendices['idAprendiz'];?>"><img src="./img/icons/buscar-icono.png" alt=""></a>
-                    <a class="aIconos" href="./aprendicesEliminar.php?idAprendiz=<?php echo $filasAprendices['idAprendiz'];?>"><img src="./img/icons/borrar-icono.png" alt=""></a>
+                    <a class="aIconos" href="./server/aprendicesEliminar.php?idAprendiz=<?php echo $filasAprendices['idAprendiz'];?>"><img src="./img/icons/borrar-icono.png" alt=""></a>
                 
                 </td>
               </tr>

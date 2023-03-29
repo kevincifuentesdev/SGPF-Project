@@ -1,6 +1,6 @@
     <?php
     session_start();
-    include 'conexion.php'; 
+    include './server/conexion.php'; 
 
     if(isset($_GET['idAprendiz'])){
         $id = $_GET['idAprendiz'];

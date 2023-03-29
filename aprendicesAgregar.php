@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'conexion.php';
+include './server/conexion.php';
 if (isset($_POST['Registrar'])) {
   $ficha = $_POST['ficha'];
   $documento = $_POST['tipoDocumento'];
@@ -9,17 +9,29 @@ if (isset($_POST['Registrar'])) {
   $apellido = $_POST['apellidoAprendiz'];
   $estado = $_POST['estado'];
 
-  $queryIdProgramaFormacion = "SELECT idProgramaFormacion FROM programaformacion WHERE ficha = $ficha;";
-  $resultQueryIdPrograma = mysqli_query($conn, $queryIdProgramaFormacion);
-  $listIdProgramaFormacion = mysqli_fetch_assoc($resultQueryIdPrograma);
-  $idProgramaFormacion = $listIdProgramaFormacion['idProgramaFormacion'];
+  $sql = "SELECT * FROM aprendiz WHERE numeroDocumento = '$nroDocumento';";
+  $result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) {
+      // Mostrar mensaje de error si el aprendiz y la ficha ya existen
+    if (mysqli_num_rows($result) > 0) {
+        // Mostrar mensaje de error si el aprendiz y la ficha ya existen
+        echo "<script>alert(\"El aprendiz con documento '$nroDocumento' ya existe en la base de datos\");window.location = 'aprendicesAgregar.php'</script>";
+    }
+      
+  } else {
+      $queryIdProgramaFormacion = "SELECT idProgramaFormacion FROM programaformacion WHERE CONCAT(ficha, ' - ', nombrePrograma) = '$ficha';";
+      $resultQueryIdPrograma = mysqli_query($conn, $queryIdProgramaFormacion);
+      $listIdProgramaFormacion = mysqli_fetch_assoc($resultQueryIdPrograma);
+      $idProgramaFormacion = $listIdProgramaFormacion['idProgramaFormacion'];
 
-  $insertAprendiz = "INSERT INTO aprendiz(idProgramaFormacion, nombreAprendiz, apellidoAprendiz, tipoDocumento, numeroDocumento, estado) VALUES($idProgramaFormacion, '$nombre', '$apellido', '$documento', '$nroDocumento', '$estado');";
-  $resultInsertAprendiz = mysqli_query($conn, $insertAprendiz);
-  echo "<script>alert('Se registró exitosamente');window.location ='aprendicesAgregar.php'</script>";
+      $insertAprendiz = "INSERT INTO aprendiz(idProgramaFormacion, nombreAprendiz, apellidoAprendiz, tipoDocumento, numeroDocumento, estado) VALUES($idProgramaFormacion, '$nombre', '$apellido', '$documento', '$nroDocumento', '$estado');";
+      $resultInsertAprendiz = mysqli_query($conn, $insertAprendiz);
+      echo "<script>alert('Se registró exitosamente');window.location ='aprendicesAgregar.php'</script>";
+
+  }
 }
 
-$queryFicha = "SELECT ficha FROM programaFormacion;";
+$queryFicha = "SELECT CONCAT(ficha, ' - ', nombrePrograma) AS ficha FROM programaformacion;";
 $resultadoQueryFicha = mysqli_query($conn, $queryFicha);
 $filasFicha = mysqli_fetch_assoc($resultadoQueryFicha);
 
@@ -68,15 +80,15 @@ $filasFicha = mysqli_fetch_assoc($resultadoQueryFicha);
       <h2 class="title-form">Nuevo Aprendiz</h2>
       <form action="aprendicesAgregar.php" method="POST" class="form-nuevo-proyecto">
         <label for="ficha">Ficha:</label>
-      <datalist id="ficha">
-        <?php while ($filasFicha) { ?>
+      <datalist id="ficha" required>
+        <?php
+          while ($filasFicha) { ?>
             <option value="<?php echo $filasFicha['ficha'] ?>"></option>
         <?php   
             $filasFicha = mysqli_fetch_assoc($resultadoQueryFicha);
-            } ?>
+          }?>
         </datalist>
-        <input class="input" type="text" name="ficha" id="" list="ficha">
-            
+        <input list="ficha" class="input" name="ficha">
         <label for="tipoDocumento">Tipo de documento:</label>
         <select name="tipoDocumento" id="tipoDocumento">
           <option value="CC">CC</option>
@@ -96,7 +108,7 @@ $filasFicha = mysqli_fetch_assoc($resultadoQueryFicha);
 
         <label for="estado">Estado:</label>
         <select name="estado" id="estado">
-          <option value="enFormacion">En formación</option>
+          <option value=" En formacion">En formación</option>
           <option value="Condicional">Condicional</option>
           <option value="Cancelado">Cancelado</option>
           <option value="Traslado">Traslado</option>
