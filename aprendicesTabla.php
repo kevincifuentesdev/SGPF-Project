@@ -85,9 +85,9 @@ include './server/conexion.php';
                   <td><?php echo $filasAprendices['apellidoAprendiz'] ?></td>
                   <td><?php echo $filasAprendices['estado'] ?></td>
                   <td class="container-action-btns">
-                  <a href="./aprendicesEditar.php"><button class="btn-editar">Editar</button></a>
-                  <button class="btn-detalle">Ver detalle</button>
-                  <a href="./aprendicesEliminar.php?idAprendiz=<?php echo $filasAprendices['idAprendiz'];?>"><button class="btn-borrar">Borrar</button></a>
+                  <a class="aIconos" href="./aprendicesEditar.php?idAprendiz=<?php echo $filasAprendices['idAprendiz'];?>"><img src="./img/icons/edit-icono.png" alt=""></a>
+                    <a class="aIconos" href="./aprendicesDetalle.php?idAprendiz=<?php echo $filasAprendices['idAprendiz'];?>"><img src="./img/icons/buscar-icono.png" alt=""></a>
+                    <a class="aIconos" href="./server/aprendicesEliminar.php?idAprendiz=<?php echo $filasAprendices['idAprendiz'];?>"><img src="./img/icons/borrar-icono.png" alt=""></a>
                   </td>
                 </tr>
             <?php
