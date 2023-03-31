@@ -1,3 +1,13 @@
+<?php
+include './server/conexion.php';
+
+$queryAprendices = "SELECT CONCAT(aprendiz.numeroDocumento, ' - ', aprendiz.nombreAprendiz, ' ', aprendiz.apellidoAprendiz) AS aprendiz FROM aprendiz;";
+$resultAprendices = mysqli_query($conn, $queryAprendices);
+
+$queryProyectos = "SELECT proyecto.nombreProyecto AS proyecto FROM proyecto;";
+$resultProyectos = mysqli_query($conn, $queryProyectos);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,34 +40,48 @@
     </header>
     <nav id="navega">
         <ul>
-            <li><a href="">Aprendiz</a></li>
-            <li><a href="">Participantes</a></li>
-            <li><a href="">Ficha proyecto</a></li>
-            <li><a href="">Fases</a></li>
-            <li><a href="">Instructor</a></li>
-            <li><a href="">Fases Instructor</a></li>
+            <li><a href="./aprendicesTabla.php">Aprendiz</a></li>
+            <li><a href="./participantesTabla.php">Participantes</a></li>
+            <li><a href="./proyectoTabla.php">Ficha proyecto</a></li>
+            <li><a href="./faseTabla.php">Fases</a></li>
+            <li><a href="./instructoresTabla.php">Instructor</a></li>
+            <li><a href="./faseInstructorTabla.php">Fases Instructor</a></li>
         </ul>
     </nav>
     <main>
         <div class="form-container">
             <h2 class="title-form">Nuevo Participante</h2>
-            <form action="" class="form-nuevo-proyecto">
+            <form action="./participantesAgregar.php" method="POST" class="form-nuevo-proyecto">
                 <label for="aprendiz">Aprendiz:</label>
-                <select name="aprendiz" id="aprendiz">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
+                <input list="aprendiz" class="input" placeholder="Ingrese el aprendiz">
+                <datalist name="aprendiz" id="aprendiz">
+                    <?php
+                    $listAprendices = mysqli_fetch_assoc($resultAprendices);
+                    while ($listAprendices) {
+                        ?>
+                        <option value="<?php echo $listAprendices['aprendiz'] ?>"></option>
+                        <?php
+                        $listAprendices = mysqli_fetch_assoc($resultAprendices);
+                    }
+                    ?>
+                </datalist>
                 <label for="proyecto">Proyecto:</label>
-                <select name="proyecto" id="proyecto">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
+                <input list="proyecto" class="input" placeholder="Ingrese el proyecto">
+                <datalist name="proyecto" id="proyecto">
+                    <?php
+                    $listProyectos = mysqli_fetch_assoc($resultProyectos);
+                    while ($listProyectos) {
+                        ?>
+                        <option value="<?php echo $listProyectos['proyecto'] ?>"></option>
+                        <?php
+                        $listProyectos = mysqli_fetch_assoc($resultProyectos);
+                    }
+                    ?>
+                </datalist>
 
                 <div class="btns-container">
                     <input class="input-submit-registrar" type="submit" value="Registrar" />
-                    <input class="input-submit-limpiar" type="submit" value="Limpiar" />
+                    <input class="input-submit-limpiar" type="reset" value="Limpiar" />
                 </div>
             </form>
         </div>
@@ -66,3 +90,22 @@
 </body>
 
 </html>
+
+<?php
+$aprendiz = $_POST['aprendiz'];
+$proyecto = $_POST['proyecto'];
+
+$queryIdAprendiz = "SELECT idAprendiz FROM aprendiz WHERE CONCAT(aprendiz.numeroDocumento, ' - ', aprendiz.nombreAprendiz, ' ', aprendiz.apellidoAprendiz) = '$aprendiz';";
+$resultIdAprendiz = mysqli_query($conn, $queryIdAprendiz);
+$idAprendizA = mysqli_fetch_assoc($resultIdAprendiz);
+$idAprendiz = $idAprendizA['idAprendiz'];
+
+$queryIdProyecto = "SELECT idProyecto FROM proyecto WHERE proyecto.nombreProyecto = '$proyecto';";
+$resultIdProyecto = mysqli_query($conn, $queryIdProyecto);
+$idProyectoA = mysqli_fetch_assoc($resultIdProyecto);
+$idProyecto = $idProyectoA['idProyecto'];
+
+$queryInsert = "INSERT INTO participantes(idProyecto, idAprendiz) VALUES ('$idProyecto', '$idAprendiz');";
+$resultInsert = mysqli_query($conn, $queryInsert);
+
+?>

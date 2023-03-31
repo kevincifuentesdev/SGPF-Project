@@ -30,16 +30,16 @@
     </header>
     <nav id="navega">
         <ul>
-            <li><a href="">Aprendiz</a></li>
-            <li><a href="">Participantes</a></li>
-            <li><a href="">Ficha proyecto</a></li>
-            <li><a href="">Fases</a></li>
-            <li><a href="">Instructor</a></li>
-            <li><a href="">Fases Instructor</a></li>
+            <li><a href="./aprendicesTabla.php">Aprendiz</a></li>
+            <li><a href="./participantesTabla.php">Participantes</a></li>
+            <li><a href="./proyectoTabla.php">Ficha proyecto</a></li>
+            <li><a href="./faseTabla.php">Fases</a></li>
+            <li><a href="./instructoresTabla.php">Instructor</a></li>
+            <li><a href="./faseInstructorTabla.php">Fases Instructor</a></li>
         </ul>
     </nav>
     <main>
-    <div class="form-container">
+        <div class="form-container">
             <h2 class="title-form">Editar Datos Participante</h2>
             <form action="" class="form-nuevo-proyecto">
                 <label for="aprendiz">Aprendiz:</label>
