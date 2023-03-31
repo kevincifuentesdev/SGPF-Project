@@ -173,6 +173,21 @@ select {
 
 }
 
+/* esto es un codigo de alan de prueva */
+
+.input-submit-registrar-1 {
+  padding: 10px;
+  background-color: #04B0A8;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* 
+esto es un codigo de alan de prueva */
 /* Responsive Table */
 
 @media (max-width: 768px) {
