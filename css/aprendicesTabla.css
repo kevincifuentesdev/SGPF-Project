@@ -133,7 +133,7 @@ body > main {
   gap: 20px;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 40%;
   align-self: start;
 }
 
@@ -212,9 +212,14 @@ th {
 .container-action-btns {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 10px;
+  width: max-content;
 }
 
+.container-action-btns > a {
+  width: 100%;
+}
 
 .btn-editar {
   color: #ffffff;
@@ -259,22 +264,6 @@ tr:nth-child(2n) {
   background-color: #dfdfdf;
 }
 
-
-.aIconos{
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  padding: 2px;
-}
-
-.aIconos:hover{
- background-color: var(--naranja-hover);
-}
-
-.aIconos > img{
-  width: 100%;
-  height: 100%;
-}
 
 /* Responsive Tablet */
 

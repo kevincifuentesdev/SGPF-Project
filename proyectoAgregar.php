@@ -1,3 +1,56 @@
+<?php
+session_start();
+include 'server/conexion.php';
+if (isset($_POST['Registrar'])){
+    $nombreProyecto = $_POST['nombreProyecto'];
+    $cliente = $_POST['cliente'];
+    $programa = $_POST['programaformacion'];
+    $planteamiento = $_POST['planteamientoProblema'];
+    $justificacion = $_POST['justificacion'];
+    $objetivoGeneral = $_POST['objetivoGeneral'];
+    $funcionalidades = $_POST['funcionalidades'];
+    $alcance = $_POST['alcances'];
+    $estado = $_POST['estado'];
+    $archivo = $_POST['archivo'];
+
+    $sql = "SELECT * FROM proyecto WHERE nombreProyecto = '$nombreProyecto'";
+    $result = mysqli_query($conn, $sql); 
+    if (mysqli_num_rows($result) > 0) {
+        // Mostrar mensaje de error si el proyecto y la ficha ya existen
+        if (mysqli_num_rows($result) > 0) {
+            // Mostrar mensaje de error si el proyecto y la ficha ya existen
+            echo "<script>alert(\"El proyecto '$nombreProyecto' ya existe en la base de datos\");window.location = 'proyectoAgregar.php'</script>";
+        }
+        
+    } else {
+        $queryIdProgramaFormacion = "SELECT programaformacion.idProgramaFormacion FROM programaformacion
+        WHERE CONCAT(ficha, ' - ', nombrePrograma) = '$programa';";
+
+        $resultadoqueryIdProgramaFormacion = mysqli_query($conn, $queryIdProgramaFormacion);
+        $filasProgramaFormacion = mysqli_fetch_assoc($resultadoqueryIdProgramaFormacion);
+        $idProgramaFormacion = $filasProgramaFormacion['idProgramaFormacion'];
+        
+        $queryInsertProyecto = "INSERT INTO proyecto (idProgramaFormacion,nombreProyecto, objetivoGeneral,  
+            estado,planteamientoProblema,justificacion,funcionalidades,alcances,archivo,cliente) 
+            VALUES('$idProgramaFormacion','$nombreProyecto','$objetivoGeneral','$estado','$planteamiento','$justificacion',
+            '$funcionalidades','$alcance','$archivo','$cliente')";
+
+        $resultadoInsertProyecto = mysqli_query($conn, $queryInsertProyecto);
+
+        if (!$resultadoInsertProyecto) {
+            echo "<script>alert('Error al agregar el proyecto');window.location = 'proyectoAgregar.php'</script>";
+        } else {
+            echo "<script>alert('Se ha agregado un nuevo proyecto con éxito');window.location = 'objetivoFormulario.php'</script>";
+        }
+    }
+}
+
+    $queryPrograma = "SELECT CONCAT(ficha, ' - ', nombrePrograma) AS programa FROM programaFormacion";
+    $resultadoQueryPrograma = mysqli_query($conn, $queryPrograma);
+    $filasPrograma = mysqli_fetch_assoc($resultadoQueryPrograma);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,57 +94,63 @@
     <main>
         <div class="form-container">
             <h2 class="title-form">Nuevo Proyecto</h2>
-            <form action="" class="form-nuevo-proyecto">
+            <form action="proyectoAgregar.php" class="form-nuevo-proyecto" method="POST">
                 <label for="nombre">Nombre:</label>
-                <input class="input" type="text" name="nombre" placeholder="Ingrese Nombre" id="" />
-
-                <label for="titulo">Titulo:</label>
-                <input class="input" type="text" name="titulo" placeholder="Ingrese Titulo" id="" />
+                <input class="input" type="text" name="nombreProyecto" placeholder="Ingrese Nombre" id="" required/>
 
                 <label for="cliente">Cliente:</label>
-                <input class="input" type="text" name="cliente" placeholder="Ingrese Cliente" id="" />
+                <input class="input" type="text" name="cliente" placeholder="Ingrese Cliente" id=""required />
 
                 <label for="pro">Programa formación:</label>
-                <input class="input" type="text" name="pro" placeholder="Ingrese Programa formación" id="" />
-
+                <datalist id="programaformacion" required>
+                    <?php while ($filasPrograma) { ?>
+                <option value="<?php echo $filasPrograma['programa'] ?>"></option>
+                <?php   
+                    $filasPrograma = mysqli_fetch_assoc($resultadoQueryPrograma);
+                    } ?>
+                </datalist>
+                <input class="input" type="text" name="programaformacion" placeholder="Ingrese Programa formación" id="" list="programaformacion" required/>
                 <label for="plant">Planteamiento proyecto:</label>
-                <input class="input" type="text" name="plant" placeholder="Ingrese el planteamiento del proyecto"
-                    id="" />
+
+                <input class="input" type="text" name="planteamientoProblema" placeholder="Ingrese el planteamiento del proyecto"
+                id=""required />
 
                 <label for="justificacion">Justificacion:</label>
                 <textarea name="justificacion" id="justificacion" cols="20" rows="3"
-                    placeholder="Ingrese la justificacion del proyecto"></textarea>
+                    placeholder="Ingrese la justificacion del proyecto" required></textarea>
 
                 <label for="obj-general">Objetivo general:</label>
-                <textarea name="obj-general" id="obj-general" cols="20" rows="3"
-                    placeholder="Ingrese el objetivo general del proyecto"></textarea>
+                <textarea name="objetivoGeneral" id="obj-general" cols="20" rows="3"
+                    placeholder="Ingrese el objetivo general del proyecto" required></textarea>
 
                 <a href="./objetivoFormulario.php">
                     <h4>Crear Objetivos</h4>
                 </a>
 
                 <label for="funcion">Funcion:</label>
-                <textarea name="funcion" id="funcion" cols="20" rows="3"
-                    placeholder="Ingrese la función del proyecto"></textarea>
+                <textarea name="funcionalidades" id="funcion" cols="20" rows="3"
+                    placeholder="Ingrese la función del proyecto" required></textarea>
 
                 <label for="Alcance">Alcance del proyecto:</label>
-                <input class="input" type="text" name="alcance" placeholder="Ingrese el alcance del proyecto" />
+                <input class="input" type="text" name="alcances" placeholder="Ingrese el alcance del proyecto" required />
+
+                <label for="archivo">Archivo:</label>
+                <input class="input" type="text" name="archivo" required/>
 
                 <label for="estado">Estado:</label>
-                <select name="estado" id="estado">
+                <select name="estado" id="estado" required>
                     <option value="aprobado">Aprobado</option>
                     <option value="reprobado">Reprobado</option>
                     <option value="ajustar">Por ajustar</option>
                 </select>
 
                 <div class="btns-container">
-                    <input class="input-submit-registrar" type="submit" value="Registrar" />
-                    <input class="input-submit-limpiar" type="submit" value="Limpiar" />
+                    <input class="input-submit-registrar" type="submit" value="Registrar" name="Registrar" />
+                    <input class="input-submit-limpiar" type="submit" value="Limpiar" name="Registrar" />
                 </div>
             </form>
         </div>
     </main>
-    <script src="./js/script.js"></script>
-</body>
+    <script src="./js/script.js"></script></body>
 
 </html>
